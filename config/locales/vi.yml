@@ -1,0 +1,12 @@
+vi:
+ layouts:
+   header:
+     home: Trang chủ
+     category: Thể loại
+     list: Danh sách
+     search: Tìm kiếm
+     help: Trợ giúp
+     sign_up: Đăng ký
+     sign_in: Đăng nhập
+   footer:
+     contact: Liên hệ
