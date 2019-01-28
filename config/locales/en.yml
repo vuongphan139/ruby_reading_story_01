@@ -1,4 +1,7 @@
 en:
+  invalid_email_password: Invalid email or password.
+  login_successful: Login successful.
+  please_login_account: Please login account!
   sign_up_success: Sign up successful.
   sign_up_fail: Sign up fail.
   layouts:
@@ -17,3 +20,6 @@ en:
       sign_up: Sign up
       form_contains: This form contains
       error: error
+  sessions:
+    new:
+      sign_in: Sign in
