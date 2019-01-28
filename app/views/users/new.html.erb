@@ -1,0 +1,36 @@
+<div class="row pt-4 pb-5">
+  <h3 class="m-auto"><%= t ".sign_up" %></h3>
+</div>
+<div class="row">
+  <%= form_for @user, html: {class: "col-12"} do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <div class="alert alert-danger">
+          <%= t ".form_contains" %> <%= pluralize @user.errors.count, t(".error") %>.
+        </div>
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    
+    <%= f.label :name, class: "mt-2" %>
+    <%= f.text_field :name, class: "form-control" %>
+
+    <%= f.label :account_name, class: "mt-2" %>
+    <%= f.text_field :account_name, class: "form-control" %>
+
+    <%= f.label :email, class: "mt-2" %>
+    <%= f.email_field :email, class: "form-control" %>
+
+    <%= f.label :password, class: "mt-2" %>
+    <%= f.password_field :password, class: "form-control" %>
+
+    <%= f.label :password_confirmation, class: "mt-2" %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+
+    <%= f.submit t(".sign_up"), class: "btn btn-primary mt-3 mb-5" %>
+  <% end %>    
+</div>

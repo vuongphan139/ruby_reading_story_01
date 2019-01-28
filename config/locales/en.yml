@@ -1,4 +1,6 @@
 en:
+  sign_up_success: Sign up successful.
+  sign_up_fail: Sign up fail.
   layouts:
     header:
       home: Home
@@ -10,3 +12,8 @@ en:
       sign_in: Sign in
     footer:
       contact: Contact
+  users:
+    new:
+      sign_up: Sign up
+      form_contains: This form contains
+      error: error
