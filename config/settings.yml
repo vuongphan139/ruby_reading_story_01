@@ -1,2 +1,6 @@
 email_contact: vuongphan139.it@gmail.com
 copyright: © 2019 Nam Vuong Story
+max_length_name: 50
+max_length_account_name: 50
+max_length_email: 255
+min_length_password: 6
