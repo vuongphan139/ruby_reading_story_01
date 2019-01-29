@@ -2,6 +2,12 @@ en:
   notice: Please check your email to activate your account.
   account_activated: Account activated
   invalid_activation_link: Invalid activation link
+  writing: Writing
+  done: Done
+  story_update_failure: Story update failure.
+  story_update_successful: Story update successful.
+  add_story_failure: Add story failure.
+  add_story_successful: Add story successful.
   invalid_email_password: Invalid email or password.
   login_successful: Login successful.
   please_login_account: Please login account!
@@ -34,3 +40,20 @@ en:
   sessions:
     new:
       sign_in: Sign in
+  stories:
+    edit:
+      edit_story: Edit story
+    new:
+      add_story: Add story
+      save_story: Save story
+    show:
+      story_information: Story information
+      edit_story: Edit story
+      delete_story: Delete story
+      add_chapter: Add chapter
+      chapters: Chapters
+      description: Description
+      category: Category
+      author: Author
+      name_story: Story's name
+      are_you_sure: Are you sure?

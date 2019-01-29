@@ -2,6 +2,8 @@ vi:
   active: Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn.
   account_activated: Tài khoản được kích hoạt
   invalid_activation_link: Liên kết kích hoạt không hợp lệ
+  writing: Dang viet
+  done: Hoan thanh
   invalid_email_password: Email hoặc mật khẩu không hợp lệ.
   login_successful: Đăng nhập thành công.
   please_login_account: Vui lòng đăng nhập tài khoản!
