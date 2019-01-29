@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :load_story, only: %i(show edit update)
+  before_action :load_story, only: %i(show edit update destroy)
 
   def new
     @story = Story.new
@@ -30,6 +30,16 @@ class StoriesController < ApplicationController
     end
   end
 
+  def destroy
+    if @story.destroy
+      flash[:success] = t "story_deleted_successful"
+      redirect_to root_path
+    else
+      flash.new[:danger] = t "story_delete_failed"
+      render :show
+    end
+  end
+
   private
 
   def story_params
@@ -41,7 +51,7 @@ class StoriesController < ApplicationController
   def load_story
     @story = Story.find_by id: params[:id]
     return if @story
-    flash[:danger] = "Story not found."
+    flash[:danger] = t "story_not_found"
     redirect_to root_path
   end
 end
