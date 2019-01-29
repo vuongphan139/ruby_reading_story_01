@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   before_save :downcase_email, :downcase_account_name
+  before_create :create_activation_digest
+  attr_reader :remember_token, :activation_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   SIGNUP_PARAMS =
     %i(name account_name email password password_confirmation).freeze
@@ -43,6 +45,14 @@ class User < ApplicationRecord
     BCrypt::Password.new(digest).is_password? token
   end
 
+  def activate
+    update activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
   private
 
   def downcase_email
@@ -51,5 +61,10 @@ class User < ApplicationRecord
 
   def downcase_account_name
     account_name.downcase!
+  end
+
+  def create_activation_digest
+    @activation_token = User.new_token
+    self.activation_digest = User.digest activation_token
   end
 end

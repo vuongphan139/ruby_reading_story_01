@@ -8,6 +8,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap", "~> 4.2.1"
 gem "coffee-rails", "~> 4.2"
 gem "config", "~> 1.7", ">= 1.7.1"
+gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3", ">= 4.3.1"
 gem "puma", "~> 3.11"
