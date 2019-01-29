@@ -13,6 +13,9 @@ en:
       help: Help
       sign_up: Sign up
       sign_in: Sign in
+      accout: Accout
+      profile: Profile
+      setting: Settings
     footer:
       contact: Contact
   users:
