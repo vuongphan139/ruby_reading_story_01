@@ -1,0 +1,20 @@
+<div class="row mt-5">
+  <div class="col-md-4 bg-primary p-3">
+    <h3><%= t ".story_information" %></h3>
+    <%= link_to t(".edit_story"), edit_story_path(@story), class: "btn btn-warning", role: "button" %>
+    <%= link_to t(".delete_story"), @story, method: :delete,
+                                  data: {confirm: t(".are_you_sure")}, class: "btn btn-danger", role: "button" %>
+    <p> <%= t ".name_story" %>: <%= @story.name %></p>
+    <p> <%= t ".author" %>: <%= @story.author_name %></p>
+    <p> <%= t ".category" %>: <%= @story.categories.map(&:name).join ", " %></p>
+    <%= image_tag @story.cover_image.url if @story.cover_image? %>
+    <p><%= t ".description" %></p>
+    <p><%= @story.description %></p>
+    <h3><%= t ".chapters" %></h3>
+    <button type="button" class="btn btn-primary d-inline"><%= t ".add_chapter" %></button>
+
+  </div>
+  <div class="col-md-8 bg-secondary">
+
+  </div>
+</div>
