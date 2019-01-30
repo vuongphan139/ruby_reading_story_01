@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
 
   create_table "chapters", force: :cascade do |t|
     t.string "name"
-    t.string "content"
+    t.integer "progress"
     t.string "image"
+    t.string "content"
     t.integer "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
