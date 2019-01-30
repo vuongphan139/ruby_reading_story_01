@@ -1,4 +1,7 @@
 en:
+  story_not_found: Story not found.
+  story_delete_failed: Story delete failed.
+  story_deleted_successful: Story deleted successful.
   notice: Please check your email to activate your account.
   account_activated: Account activated
   invalid_activation_link: Invalid activation link
