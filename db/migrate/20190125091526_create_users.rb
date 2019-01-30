@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :avatar
       t.boolean :admin
+      t.string :remember_digest
 
       t.timestamps
     end

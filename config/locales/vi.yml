@@ -1,9 +1,17 @@
 vi:
+  active: Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn.
+  account_activated: Tài khoản được kích hoạt
+  invalid_activation_link: Liên kết kích hoạt không hợp lệ
   invalid_email_password: Email hoặc mật khẩu không hợp lệ.
   login_successful: Đăng nhập thành công.
   please_login_account: Vui lòng đăng nhập tài khoản!
   sign_up_success: Đăng ký thành công.
   sign_up_fail: Đăng ký thất bại.
+  wel_web: Chào mừng bạn đến với Sample app! Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn
+  hi: xin chào
+  active: đã kích hoạt
+  not_activeted: Tài khoản chưa được kích hoạt và Kiểm tra email của bạn để biết liên kết kích hoạt.
+  account_activations: Tài khoản kích hoạt
   layouts:
     header:
       home: Trang chủ
