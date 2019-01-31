@@ -44,12 +44,13 @@ en:
     new:
       sign_in: Sign in
   stories:
-    edit:
+    show:
+      story_info: Story Information
       edit_story: Edit story
     new:
       add_story: Add story
       save_story: Save story
-    show:
+    edit:
       story_information: Story information
       edit_story: Edit story
       delete_story: Delete story
@@ -60,3 +61,10 @@ en:
       author: Author
       name_story: Story's name
       are_you_sure: Are you sure?
+    index:
+      list_story: List story
+      category: Category
+      status: Status
+      story_name: Story name
+      category: Category
+      status: Status

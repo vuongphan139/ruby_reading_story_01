@@ -7,4 +7,12 @@ class Story < ApplicationRecord
   def init_liked
     self.liked = 0
   end
+
+  def category_info
+    self.categories.map(&:name).join ", "
+  end
+
+  def progress_info
+    (self.progress == Settings.progress_done)? t("done") : t("writing")
+  end
 end

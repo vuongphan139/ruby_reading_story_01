@@ -26,7 +26,7 @@ module SessionsHelper
 
   def redirect_back_or default
     redirect_to session[:forwarding_url] || default
-    session[:forwarding_url].delete
+    session.delete :forwarding_url
   end
 
   def remember user

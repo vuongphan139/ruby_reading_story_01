@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/signin", to: "sessions#new"
   post "/signin", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
+  get "/stories", to: "stories#index", as: "progress_filter"
   resources :users
   resources :account_activations, only: %i(edit)
   resources :stories

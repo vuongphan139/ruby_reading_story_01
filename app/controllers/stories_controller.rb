@@ -1,5 +1,15 @@
 class StoriesController < ApplicationController
   before_action :load_story, only: %i(show edit update destroy)
+  before_action :logged_in_user, only: %i(new create edit update destroy)
+
+  def index
+    @categories = Category.all
+    @stories = Story.all
+    category_id = params[:category_id]
+    category = Category.find_by id: category_id
+    @stories = category.stories if category
+    @stories = @stories.page(params[:page]).per Settings.stories_per_page
+  end
 
   def new
     @story = Story.new
@@ -10,7 +20,7 @@ class StoriesController < ApplicationController
 
     if @story.save
       flash[:success] = t "add_story_successful"
-      redirect_to @story
+      redirect_to edit_story_path @story
     else
       flash.now[:danger] = t "add_story_failure"
     end

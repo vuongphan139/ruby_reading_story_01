@@ -38,6 +38,6 @@ class SessionsController < ApplicationController
     log_in user
     remerber_login = params[:session][:remember_me]
     remerber_login == Settings.remember_me ? remember(user) : forget(user)
-    redirect_to root_path
+    redirect_back_or root_path
   end
 end
