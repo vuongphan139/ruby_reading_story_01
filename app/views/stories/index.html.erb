@@ -1,0 +1,34 @@
+<h4 class="py-4"><%= t ".list_story" %></h3>
+<div class="row">
+  <div class="col-md-3">
+    <h6><%= t ".category" %></h6>
+    <ul>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, stories_path(category_id: category.id) %></li>
+      <% end %>
+    </ul>
+    <h6><%= t ".status" %></h6>
+    <ul>
+      
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <table class="col-md-12 mb-5">
+      <tr>
+        <th><%= t ".story_name" %></th>
+        <th><%= t ".category" %></th>
+        <th><%= t ".status" %></th>
+      </tr>
+      <% @stories.each do |story| %>
+        <tr>
+          <td>
+            <%= link_to story.name, story %><br/>
+          </td>
+          <td><%= story.category_info %></td>
+          <td><%= story.progress_info %></td>
+        </tr>
+      <% end %>
+    </table>
+    <%= paginate @stories %>
+  </div>
+</div>

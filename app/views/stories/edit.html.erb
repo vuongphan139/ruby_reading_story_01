@@ -1,26 +1,19 @@
-<div class="row pt-4 pb-5">
-  <h3 class="m-auto"><%= t ".edit_story" %></h3>
-</div>
-<div class="row">
-  <%= form_for @story, html: {class: "col-12"} do |f| %>
-    <%= f.label :name, class: "mt-2" %>
-    <%= f.text_field :name, class: "form-control" %>
-
-    <%= f.label :author_name, class: "mt-2" %>
-    <%= f.text_field :author_name, class: "form-control" %>
-
-    <%= f.label :progress, class: "mt-2" %><br/>
-    <%= f.select :progress, Settings.progress_select_box, class: "form-control" %><br/>
-
-    <%= f.label :category, class: "mt-2" %><br/>
-    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %></br>
-
-    <%= f.label :cover_image, class: "mt-2" %><br/>
-    <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/  >
-
-    <%= f.label :description, class: "mt-2" %>
-    <%= f.text_field :description, class: "form-control" %>
-
-    <%= f.submit t(".edit_story"), class: "btn btn-primary mt-3 mb-5" %>
-  <% end %>    
+<div class="row mt-3">
+  <div class="col-md-4 bg-primary p-3">
+    <h3><%= t ".story_information" %></h3>
+    <%= link_to t(".edit_story"), edit_story_path(@story), class: "btn btn-warning", role: "button" %>
+    <%= link_to t(".delete_story"), @story, method: :delete,
+                                  data: {confirm: t(".are_you_sure")}, class: "btn btn-danger", role: "button" %>
+    <p> <%= t ".name_story" %>: <%= @story.name %></p>
+    <p> <%= t ".author" %>: <%= @story.author_name %></p>
+    <p> <%= t ".category" %>: <%= @story.categories.map(&:name).join ", " %></p>
+    <%= image_tag @story.cover_image.url if @story.cover_image? %>
+    <p><%= t ".description" %></p>
+    <p><%= @story.description %></p>
+    <h3><%= t ".chapters" %></h3>
+    <button type="button" class="btn btn-primary d-inline"><%= t ".add_chapter" %></button>
+  </div>
+  <div class="col-md-8 bg-secondary p-3">
+    <h3><%= t ".add_chapter" %></h3>
+  </div>
 </div>

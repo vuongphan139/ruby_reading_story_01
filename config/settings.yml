@@ -5,4 +5,5 @@ max_length_account_name: 50
 max_length_email: 255
 min_length_password: 6
 resize_image_limit: [300, 300]
-progress_select_box: [[<%= I18n.t "writing" %>, 1], [<%= I18n.t "done" %>, 2]]
+stories_per_page: 15
+progress_done: 1
