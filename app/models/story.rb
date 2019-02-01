@@ -13,6 +13,6 @@ class Story < ApplicationRecord
   end
 
   def progress_info
-    (self.progress == Settings.progress_done)? t("done") : t("writing")
+    (self.progress == Settings.progress_done)? I18n.t("done") : I18n.t("writing")
   end
 end
