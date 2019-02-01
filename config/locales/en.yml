@@ -47,6 +47,13 @@ en:
     show:
       story_info: Story Information
       edit_story: Edit story
+      more_information: More information
+      author: Author
+      progress: Progress
+      categories: Categories
+      liked: Liked
+      chapters: Chapters
+      like: Like
     new:
       add_story: Add story
       save_story: Save story

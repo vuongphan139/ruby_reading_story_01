@@ -1,1 +1,31 @@
-<h3><%= t ".story_info" %></h3>
+<div class="row mt-3">
+  <div class="col-md-4 bg-primary p-3">
+    <%= image_tag @story.cover_image.url if @story.cover_image? %>
+  </div>
+  <div class="col-md-8 bg-info p-3">
+    <h5><%= time_ago_in_words @story.created_at %></h5>
+    <h4><%= @story.name %></h4>
+    <p><%= link_to @story.user.name, @story.user %>
+    <p class="pl-3"><%= @story.description %></p>
+  </div>
+</div>
+<div id="section-like-follow" class="row py-3 mt-5">
+  <button type="button" class="btn btn-primary"><%= t ".like" %></button>
+</div>
+<div class="row mt-5">
+  <div class="col-md-8 bg-info p-3">
+    <h4><%= t ".chapters" %></h4>
+    <ul>
+      <% @story.chapters.each do |chapter| %>
+        <li><%= link_to chapter.name, chapter %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="col-md-4 bg-primary p-3">
+    <h4><%= t ".more_information" %></h4>
+    <p><%= t ".author" %>: <%= link_to @story.author_name, "#" %></p>
+    <p><%= t ".progress" %>: <%= @story.progress_info %></p>
+    <p><%= t ".categories" %>: <%= @story.category_info %></p>
+    <p><%= t ".liked" %>: <%= @story.liked %></p>
+  </div>
+</div>
