@@ -1,21 +1,27 @@
 @import "bootstrap";
 
+$light_gray: #eaeaea;
+$dark_blue: #1d5268;
+$a_color: black;
+$footer_text_color: white;
+$list_story_table_border: black;
+
 body {
   font-family: SourceSansPro, sans-serif;
 }
 
 header {
-  background-color: #1d5268;
+  background-color: $dark_blue;
 }
 
 footer {
-  background-color: #10b591;
+  background-color: $dark_blue;
   font-weight: bold;
-  color: white;
+  color: $footer_text_color;
 }
 
 a {
-  color: #333;
+  color: $a_color;
   text-decoration: none;
 }
 
@@ -24,5 +30,10 @@ ul {
 }
 
 tr {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $list_story_table_border;
+}
+
+#section-like-follow {
+  border-bottom: 3px dashed $light_gray;
+  border-top: 3px dashed $light_gray;
 }
