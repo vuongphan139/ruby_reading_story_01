@@ -1,4 +1,12 @@
 en:
+  add_chapter_successful: add chapter successful
+  add_chapter_failure: add chapter failure
+  chapter_update_successful: chapter update successful
+  chapter_update_failure: chapter update failure
+  chapter_not_found: chapter not found
+  save_chapter: save chapter
+  name_chaptername_chapter: name chaptername chapter
+  content: content
   story_not_found: Story not found.
   story_delete_failed: Story delete failed.
   story_deleted_successful: Story deleted successful.

@@ -28,4 +28,29 @@
     <p><%= t ".categories" %>: <%= @story.category_info %></p>
     <p><%= t ".liked" %>: <%= @story.liked %></p>
   </div>
+<h3><%= t ".story_info" %></h3>
+<div class="row mt-5 mb-5">
+  <div class="col-md-4 bg-primary p-3">
+    <h3><%= t ".story_information" %></h3>
+    <%= link_to t(".edit_story"), edit_story_path(@story), class: "btn btn-warning", role: "button" %>
+    <%= link_to t(".delete_story"), @story, method: :delete,
+      data: {confirm: t(".are_you_sure")}, class: "btn btn-danger", role: "button" %>
+    <p><%= t ".name_story" %>: <%= @story.name %></p>
+    <p><%= t ".author" %>: <%= @story.author_name %></p>
+    <p><%= t ".category" %>: <%= @story.categories.map(&:name).join ", " %></p>
+    <%= image_tag @story.cover_image.url if @story.cover_image? %>
+    <p><%= t ".description" %></p>
+    <p><%= @story.description %></p>
+    <div class="col-md-12">
+      <h3><%= t ".list_chapter" %></h3>
+      <ul>
+        <% @chapters.each do |chapter| %>
+          <li><%= link_to chapter.name, edit_chapter_path(chapter), remote: true %></li>
+        <% end %>
+      </ul>
+    </div>
+    <%= link_to t(".add_chapter"), new_chapter_path(story_id: @story.id),
+      class: "btn btn-primary d-inline", role: "button", remote: true %>
+  </div>
+  <div class="col-md-8 bg-secondary p-3" id="form_chapter"></div>
 </div>

@@ -13,10 +13,10 @@
     <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
 
     <%= f.label :category, class: "mt-2" %><br/>
-    <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %></br>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br/>
 
     <%= f.label :cover_image, class: "mt-2" %><br/>
-    <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/  >
+    <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/>
 
     <%= f.label :description, class: "mt-2" %>
     <%= f.text_field :description, class: "form-control" %>

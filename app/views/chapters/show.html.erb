@@ -1,0 +1,8 @@
+<div class="row mt-5 mb-5">
+  <div class="col-md-4">
+    <p><%= t "name_chapter" %>: <%= @chapter.name %></p>
+    <%= image_tag @chapter.image.url if @chapter.image? %>
+    <p><%= t "content" %></p>
+    <p><%= @chapter.content %></p>
+  </div>
+</div>

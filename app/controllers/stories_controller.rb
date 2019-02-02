@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :load_story, only: %i(show edit update destroy)
+  before_action :find_story, only: %i(show edit update destroy)
   before_action :logged_in_user, only: %i(new create edit update destroy)
 
   def index
@@ -26,7 +26,9 @@ class StoriesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @chapters = @story.chapters
+  end
 
   def edit; end
 
@@ -58,8 +60,9 @@ class StoriesController < ApplicationController
       :progress, category_ids: []
   end
 
-  def load_story
+  def find_story
     @story = Story.find_by id: params[:id]
+
     return if @story
     flash[:danger] = t "story_not_found"
     redirect_to root_path
