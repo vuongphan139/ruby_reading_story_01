@@ -14,9 +14,11 @@
   <body>
     <%= render "layouts/header" %>
     <div class="container">
-      <% flash.each do |message_type, message| %>
-        <div class="row mt-3 alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+      <div id="flash_message">
+        <% flash.each do |message_type, message| %>
+          <div class="row mt-3 alert alert-<%= message_type %>"><%= message %></div>
+        <% end %>
+      </div>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>

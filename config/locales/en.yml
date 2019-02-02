@@ -1,10 +1,12 @@
 en:
+  edit_chapter: Edit chapter
+  add_chapter: Add chapter
   add_chapter_successful: add chapter successful
   add_chapter_failure: add chapter failure
   chapter_update_successful: chapter update successful
   chapter_update_failure: chapter update failure
   chapter_not_found: chapter not found
-  save_chapter: save chapter
+  save_chapter: Save chapter
   name_chaptername_chapter: name chaptername chapter
   content: content
   story_not_found: Story not found.
@@ -31,6 +33,7 @@ en:
   active: Actived
   layouts:
     header:
+      add_story: Add story
       home: Home
       category: Category
       list: List
@@ -40,7 +43,7 @@ en:
       sign_in: Sign in
       accout: Accout
       profile: Profile
-      setting: Settings
+      settings: Settings
     footer:
       contact: Contact
   users:
@@ -51,6 +54,11 @@ en:
   sessions:
     new:
       sign_in: Sign in
+  chapters:
+    new_chapter_form:
+      save_chapter: Save chapter
+    edit_chapter_form:
+      update_chapter: Update chapter
   stories:
     show:
       story_info: Story Information
