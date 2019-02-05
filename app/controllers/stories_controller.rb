@@ -30,7 +30,9 @@ class StoriesController < ApplicationController
     @chapters = @story.chapters
   end
 
-  def edit; end
+  def edit
+    @chapters = @story.chapters
+  end
 
   def update
     if @story.update story_params

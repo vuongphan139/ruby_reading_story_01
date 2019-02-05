@@ -1,0 +1,7 @@
+<div id="flash" class="row toast mt-3" data-autohide="false" data-delay="2000">
+  <% flash.each do |message_type, message| %>
+    <div class="toast-body alert alert-<%= message_type %>">
+      <%= message %>
+    </div>
+  <% end %>
+</div>

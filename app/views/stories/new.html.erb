@@ -2,23 +2,12 @@
   <h3 class="m-auto"><%= t ".add_story" %></h3>
 </div>
 <div class="row">
-  <%= form_for @story, html: {class: "col-12"} do |f| %>
-    <%= f.label :name, class: "mt-2" %>
+  <%= bootstrap_form_for @story, html: {class: "col-12"} do |f| %>
     <%= f.text_field :name, class: "form-control" %>
-
-    <%= f.label :author_name, class: "mt-2" %>
     <%= f.text_field :author_name, class: "form-control" %>
-
-    <%= f.label :progress, class: "mt-2" %><br/>
     <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
-
-    <%= f.label :category, class: "mt-2" %><br/>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br/>
-
-    <%= f.label :cover_image, class: "mt-2" %><br/>
     <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/>
-
-    <%= f.label :description, class: "mt-2" %>
     <%= f.text_field :description, class: "form-control" %>
 
     <%= f.submit t(".save_story"), class: "btn btn-primary mt-3 mb-5" %>

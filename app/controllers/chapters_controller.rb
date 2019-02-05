@@ -3,6 +3,7 @@ class ChaptersController < ApplicationController
   before_action :find_story, only: %i(new create)
 
   def new
+    @chapter = @story.chapters.build
     respond_to do |format|
       format.html
       format.js
@@ -10,11 +11,17 @@ class ChaptersController < ApplicationController
   end
 
   def create
+    @chapter = @story.chapters.build chapter_params
+
     if @chapter.save
-      flash[:success] = t "add_chapter_successful"
-      redirect_to story
+      flash.now[:success] = t "add_chapter_successful"
     else
       flash.now[:danger] = t "add_chapter_failure"
+    end
+    @chapters = @story.chapters
+    respond_to do |format|
+      format.html{redirect_to edit_story_path @chapter.story}
+      format.js
     end
   end
 
@@ -30,11 +37,14 @@ class ChaptersController < ApplicationController
 
   def update
     if @chapter.update chapter_params
-      flash[:success] = t "chapter_update_successful"
-      redirect_to @chapter
+      flash.now[:success] = t "chapter_update_successful"
     else
       flash.now[:danger] = t "chapter_update_failure"
-      render :edit
+    end
+    @chapters = @chapter.story.chapters
+    respond_to do |format|
+      format.html{redirect_to edit_story_path @chapter.story}
+      format.js
     end
   end
 
@@ -54,7 +64,6 @@ class ChaptersController < ApplicationController
   end
 
   def find_story
-    story = Story.find_by id: params[:story_id]
-    @chapter = story.chapters.build
+    @story = Story.find_by id: params[:story_id]
   end
 end
