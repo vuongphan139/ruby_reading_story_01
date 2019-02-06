@@ -1,7 +1,7 @@
 <header>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">NVStory</a>
+      <%= link_to "NVStory", root_path, class: "navbar-brand" %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,13 +9,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <%= link_to t(".home"), "#", class: "nav-link" %>           
+            <%= link_to t(".home"), root_path, class: "nav-link" %>           
           </li>
           <li class="nav-item">
             <%= link_to t(".category"), "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to t(".list"), "#", class: "nav-link" %>
+            <%= link_to t(".list"), stories_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to t(".search"), "#", class: "nav-link" %>

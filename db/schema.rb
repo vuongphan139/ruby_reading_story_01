@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2019_01_29_034805) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -20,8 +23,8 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
   end
 
   create_table "categories_stories", id: false, force: :cascade do |t|
-    t.integer "story_id", null: false
-    t.integer "category_id", null: false
+    t.bigint "story_id", null: false
+    t.bigint "category_id", null: false
     t.index ["category_id"], name: "index_categories_stories_on_category_id"
     t.index ["story_id"], name: "index_categories_stories_on_story_id"
   end
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
     t.integer "progress"
     t.string "image"
     t.string "content"
-    t.integer "story_id"
+    t.bigint "story_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["story_id"], name: "index_chapters_on_story_id"
@@ -44,7 +47,7 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
     t.integer "progress"
     t.string "description"
     t.integer "liked"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_stories_on_user_id"
@@ -65,4 +68,6 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
     t.datetime "activated_at"
   end
 
+  add_foreign_key "chapters", "stories"
+  add_foreign_key "stories", "users"
 end
