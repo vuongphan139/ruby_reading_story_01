@@ -55,6 +55,8 @@ en:
     new:
       sign_in: Sign in
   chapters:
+    show:
+      story: Story
     new_chapter_form:
       save_chapter: Save chapter
     edit_chapter_form:
@@ -85,6 +87,7 @@ en:
       name_story: Story's name
       are_you_sure: Are you sure?
     index:
+      all_category: All category
       list_story: List story
       category: Category
       status: Status

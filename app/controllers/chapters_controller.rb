@@ -1,6 +1,7 @@
 class ChaptersController < ApplicationController
   before_action :find_chapter, only: %i(show edit update)
   before_action :find_story, only: %i(new create)
+  layout "show_chapter_layout", only: %i(show)
 
   def new
     @chapter = @story.chapters.build

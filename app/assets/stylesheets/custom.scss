@@ -5,6 +5,7 @@ $dark_blue: #1d5268;
 $a_color: black;
 $footer_text_color: white;
 $list_story_table_border: black;
+$all_category_color: #007bff;
 
 body {
   font-family: SourceSansPro, sans-serif;
@@ -44,4 +45,8 @@ tr {
 
 .alert {
   margin-bottom: auto;
+}
+
+.list_category li:first-child a {
+  color: $all_category_color;
 }
