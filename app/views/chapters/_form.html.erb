@@ -5,7 +5,7 @@
   <%= f.text_field :name, class: "form-control" %>
   <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
   <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %><br/>
-  <%= f.text_field :content, class: "form-control" %>
+  <%= f.text_area :content, rows: Settings.text_area_rows_chapter_content, class: "form-control" %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary mt-3 mb-5" %>
 <% end %>

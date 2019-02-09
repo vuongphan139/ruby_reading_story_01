@@ -2,7 +2,8 @@
 <div class="row">
   <div class="col-md-3">
     <h6><%= t ".category" %></h6>
-    <ul>
+    <ul class="list_category">
+      <li><%= link_to t(".all_category"), stories_path %></li>
       <% @categories.each do |category| %>
         <li><%= link_to category.name, stories_path(category_id: category.id) %></li>
       <% end %>

@@ -7,3 +7,5 @@ min_length_password: 6
 resize_image_limit: [300, 300]
 stories_per_page: 15
 progress_done: 1
+text_area_rows_chapter_content: 8
+text_area_rows_story_description: 6
