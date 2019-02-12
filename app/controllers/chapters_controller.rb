@@ -1,5 +1,5 @@
 class ChaptersController < ApplicationController
-  before_action :find_chapter, only: %i(show edit update)
+  before_action :find_chapter, only: %i(show edit update destroy)
   before_action :find_story, only: %i(new create)
   layout "show_chapter_layout", only: %i(show)
 
@@ -46,6 +46,16 @@ class ChaptersController < ApplicationController
     respond_to do |format|
       format.html{redirect_to edit_story_path @chapter.story}
       format.js
+    end
+  end
+
+  def destroy
+    if @chapter.destroy
+      flash[:success] = t "chapter_deleted_successful"
+      redirect_to edit_story_path @chapter.story
+    else
+      flash[:danger] = t "chapter_delete_failed"
+      redirect_to edit_story_path @chapter.story
     end
   end
 

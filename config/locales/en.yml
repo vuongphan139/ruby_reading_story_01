@@ -1,10 +1,14 @@
 en:
+  are_you_sure: Are you sure?
   edit_chapter: Edit chapter
   add_chapter: Add chapter
+  chapter_deleted_successful: Chapter deleted successful
+  chapter_delete_failed: Chapter delete failed
   add_chapter_successful: add chapter successful
   add_chapter_failure: add chapter failure
   chapter_update_successful: chapter update successful
   chapter_update_failure: chapter update failure
+  delete_chapter: Delete chapter
   chapter_not_found: chapter not found
   save_chapter: Save chapter
   name_chaptername_chapter: name chaptername chapter
