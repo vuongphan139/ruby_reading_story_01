@@ -32,15 +32,22 @@ class StoriesController < ApplicationController
 
   def edit
     @chapters = @story.chapters
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update
     if @story.update story_params
-      flash[:success] = t "story_update_successful"
-      redirect_to @story
+      flash.now[:success] = t "story_update_successful"
     else
       flash.now[:danger] = t "story_update_failure"
-      render :edit
+    end
+    @chapters = @story.chapters
+    respond_to do |format|
+      format.html{redirect_to edit_story_path @story}
+      format.js
     end
   end
 

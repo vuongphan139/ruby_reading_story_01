@@ -1,4 +1,6 @@
 vi:
+  update_story: Lưu chuyện
+  edit_story: Sửa chuyện
   chapter_deleted_successful: Chương đã xóa thành công
   chapter_delete_failed: Xóa chương không thành công
   are_you_sure: Bạn có chắc không?
