@@ -4,4 +4,6 @@
 </div>
 <div class="row">
   <%= render "form" %>
+  <%= link_to t("delete_chapter"), @chapter, method: :delete, remote: true,
+    data: {confirm: t("are_you_sure")}, class: "btn btn-danger ml-3 mb-5", role: "button" %>
 </div>

@@ -1,8 +1,12 @@
 vi:
+  chapter_deleted_successful: Chương đã xóa thành công
+  chapter_delete_failed: Xóa chương không thành công
+  are_you_sure: Bạn có chắc không?
   add_chapter_successful: thêm chương thành công
   add_chapter_failure: thêm chương thất bại
   chapter_update_successful: cập nhật chương thành công
   chapter_update_failure: Lỗi cập nhật chương
+  delete_chapter: xóa chương
   chapter_not_found: không tìm thấy chương
   save_chapter: lưu chương
   name_chapter: nội dung
