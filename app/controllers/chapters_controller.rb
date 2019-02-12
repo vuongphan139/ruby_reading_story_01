@@ -52,11 +52,10 @@ class ChaptersController < ApplicationController
   def destroy
     if @chapter.destroy
       flash[:success] = t "chapter_deleted_successful"
-      redirect_to edit_story_path @chapter.story
     else
       flash[:danger] = t "chapter_delete_failed"
-      redirect_to edit_story_path @chapter.story
     end
+    redirect_to edit_story_path @chapter.story
   end
 
   private
