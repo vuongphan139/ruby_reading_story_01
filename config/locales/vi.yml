@@ -30,6 +30,7 @@ vi:
   account_activations: Tài khoản kích hoạt
   layouts:
     header:
+      manager_story: Quản lý truyện
       home: Trang chủ
       category: Thể loại
       list: Danh sách
@@ -48,6 +49,10 @@ vi:
       form_contains: Form chứa
       error: Lỗi
   static_pages:
+    manager:
+      add_story: Thêm truyện
+      my_stories: Truyện của tôi
+      category_manager: Quản lý thể loại
     home:
       newest_story: Sáng tác mới nhất
       view_more: Xem thêm

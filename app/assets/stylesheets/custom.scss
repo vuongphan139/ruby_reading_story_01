@@ -2,11 +2,13 @@
 
 $light_gray: #eaeaea;
 $dark_blue: #1d5268;
-$a_color: black;
-$footer_text_color: white;
-$list_story_table_border: black;
+$a_color: #000000;
+$footer_text_color: #ffffff;
+$list_story_table_border: #000000;
 $all_category_color: #007bff;
 $border_chapter_form: #1d526826;
+$writing_status: #000099;
+$done_status: #009900;
 
 body {
   font-family: SourceSansPro, sans-serif;
@@ -61,4 +63,14 @@ tr {
 
 #form_chapter {
   border-left: 3px solid $border_chapter_form;
+}
+
+.writing {
+  color: $writing_status;
+  font-weight: bold;
+}
+
+.done {
+  color: $done_status;
+  font-weight: bold;
 }

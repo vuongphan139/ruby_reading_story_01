@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "static_pages#home"
+  get "/manager", to: "static_pages#manager", as: "manager"
   get "/signup", to: "users#new"
   get "/signin", to: "sessions#new"
   post "/signin", to: "sessions#create"

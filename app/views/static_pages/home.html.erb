@@ -2,9 +2,9 @@
 <div class="row">
   <% @stories.limit(Settings.stories_newest).each do |story| %>
     <div class="col-sm-2">
-    <%= link_to (story.chapter_newest), style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
+    <%= link_to story.chapter_newest, style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
       <%= link_to story.name, story %><br/>
-      <%= link_to_unless story.chapter_newest.nil?, story.chapter_newest&.name, story.chapter_newest %>
+      <%= link_to_if story.chapter_newest.present?, story.chapter_newest&.name, story.chapter_newest %>
     <% end %>
   </div>
   <% end %>
@@ -15,9 +15,9 @@
 <div class="row">
   <% @stories.each do |story| %>
     <div class="col-sm-2">
-    <%= link_to (story.chapter_newest), style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
+    <%= link_to story.chapter_newest, style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
       <%= link_to story.name, story %><br/>
-      <%= link_to_unless story.chapter_newest.nil?, story.chapter_newest&.name, story.chapter_newest %>
+      <%= link_to_if story.chapter_newest.present?, story.chapter_newest&.name, story.chapter_newest %>
     <% end %>
   </div>
   <% end %>
