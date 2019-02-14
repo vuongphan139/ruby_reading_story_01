@@ -1,5 +1,5 @@
-<h4 class="py-4"><%= t ".list_story" %></h3>
-<div class="row">
+<h4 class="title py-4"><%= t ".list_story" %></h3>
+<div class="row" id="background_font">
   <div class="col-md-3">
     <h6><%= t ".category" %></h6>
     <ul class="list_category">
@@ -13,7 +13,7 @@
       
     </ul>
   </div>
-  <div class="col-md-9">
+  <div class="col-md-9" id="background_font">
     <table class="col-md-12 mb-5">
       <tr>
         <th><%= t ".story_name" %></th>
@@ -30,6 +30,6 @@
         </tr>
       <% end %>
     </table>
-    <%= paginate @stories %>
+    <%= paginate @stories, theme: "twitter-bootstrap-4" %>
   </div>
 </div>

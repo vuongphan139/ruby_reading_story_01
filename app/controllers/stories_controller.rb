@@ -28,6 +28,11 @@ class StoriesController < ApplicationController
 
   def show
     @chapters = @story.chapters
+
+    return unless logged_in?
+    @comment = current_user.comments.build
+    @comments = @story.comments.order_desc
+                      .page(params[:page]).per Settings.comment_items_page
   end
 
   def edit

@@ -2,6 +2,15 @@ en:
   not_allowed_access_page: You not allowed access this page.
   add_category_failed: Add category failed.
   add_category_successful: Add category successful.
+  comment: comment
+  commented: commented
+  notice: The form contains
+  you_sure: You sure ?
+  view_my_profile: View my profile
+  new_comment: new comment
+  comment_created: comment created
+  delete: Delete
+  ago: ago
   update_story: Update story
   edit_story: Edit story
   are_you_sure: Are you sure?

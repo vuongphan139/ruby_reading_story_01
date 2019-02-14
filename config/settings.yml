@@ -13,3 +13,7 @@ chapters_newest_limit: 12
 stories_newest: 6
 stories_manager_page: 12
 categories_per_page: 5
+size_comment: 140
+size_gravatar: 50
+comment_items_page: 5
+gravatar_size_user: 50

@@ -1,0 +1,8 @@
+<%= form_with model: @comment do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="field">
+    <%= hidden_field_tag :story_id, @story.id %>
+    <%= f.text_area :content, placeholder: t("new_comment") %>
+  </div>
+  <%= f.submit t("comment"), class: "btn btn-primary", remote: true %>
+<% end %>

@@ -3,6 +3,15 @@ vi:
   not_allowed_access_page: Bạn không có quyền truy cập trang này
   add_category_failed: Thêm thể loại thất bại.
   add_category_successful: Thêm thể loại thành công
+  comment: bình luận
+  commented: đã bình luận
+  notice: Mẫu có chứa
+  you_sure: Bạn chắc chứ ?
+  view_my_profile:  Xem hồ sơ của tôi
+  new_comment: bình luận mới
+  comment_created: bình luận được tạo
+  delete: Xóa
+  ago: Trước
   update_story: Lưu chuyện
   edit_story: Sửa chuyện
   chapter_deleted_successful: Chương đã xóa thành công
