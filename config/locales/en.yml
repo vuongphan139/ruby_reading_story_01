@@ -39,6 +39,7 @@ en:
   active: Actived
   layouts:
     header:
+      manager_story: Manager story
       add_story: Add story
       home: Home
       category: Category
@@ -58,6 +59,10 @@ en:
       form_contains: This form contains
       error: error
   static_pages:
+    manager:
+      add_story: Add story
+      my_stories: My stories
+      category_manager: Category manager
     home:
       newest_story: Story newest
       view_more: View more

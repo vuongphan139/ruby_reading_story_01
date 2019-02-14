@@ -26,7 +26,7 @@
             <%= link_to story.name, story %><br/>
           </td>
           <td><%= story.category_info %></td>
-          <td><%= story.progress_info %></td>
+          <td class="<%= story.progress == 1 ? "done" : "writing" %>"><%= story.progress_info %></td>
         </tr>
       <% end %>
     </table>
