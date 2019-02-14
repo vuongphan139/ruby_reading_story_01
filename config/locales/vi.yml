@@ -85,6 +85,11 @@ vi:
   sessions:
     new:
       sign_in: Đăng nhập
+  likes:
+    like:
+      like: Thích
+    dislike:
+      dislike: Bỏ thích
   stories:
     edit:
       list_chapter: Các chương

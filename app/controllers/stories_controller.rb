@@ -33,6 +33,7 @@ class StoriesController < ApplicationController
     @comment = current_user.comments.build
     @comments = @story.comments.order_desc
                       .page(params[:page]).per Settings.comment_items_page
+    @interactive = @story.interactives.build
   end
 
   def edit
