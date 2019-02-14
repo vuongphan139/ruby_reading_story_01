@@ -10,7 +10,6 @@ gem "bootstrap_form", "~> 4.1"
 gem "carrierwave", "1.2.2"
 gem "coffee-rails", "~> 4.2"
 gem "config", "~> 1.7", ">= 1.7.1"
-gem "faker", "~> 1.9", ">= 1.9.1"
 gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails", "~> 4.3", ">= 4.3.1"
@@ -27,9 +26,9 @@ gem "uglifier", ">= 1.3.0"
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   gem "factory_bot_rails", "~> 4.11", ">= 4.11.1"
-  gem "rails-controller-testing"
   gem "rspec-rails", "~> 3.7"
-  gem "shoulda-matchers", "4.0.0.rc1"
+  gem "capybara"
+  gem "faker", "~> 1.9", ">= 1.9.1"
 end
 
 group :development do
@@ -40,7 +39,9 @@ group :development do
 end
 
 group :test do
-  gem "capybara", ">= 2.15"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "database_cleaner"
+  gem "rails-controller-testing"
   gem "chromedriver-helper"
   gem "selenium-webdriver"
 end

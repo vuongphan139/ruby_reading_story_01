@@ -47,6 +47,14 @@ vi:
       sign_up: Đăng ký
       form_contains: Form chứa
       error: Lỗi
+  static_pages:
+    home:
+      newest_story: Sáng tác mới nhất
+      view_more: Xem thêm
+      chapters_newest: Chương mới nhất
   sessions:
     new:
       sign_in: Đăng nhập
+  stories:
+    edit:
+      list_chapter: Các chương
