@@ -6,6 +6,7 @@ $a_color: black;
 $footer_text_color: white;
 $list_story_table_border: black;
 $all_category_color: #007bff;
+$border_chapter_form: #1d526826;
 
 body {
   font-family: SourceSansPro, sans-serif;
@@ -49,4 +50,15 @@ tr {
 
 .list_category li:first-child a {
   color: $all_category_color;
+}
+
+.card {
+  height: 215px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#form_chapter {
+  border-left: 3px solid $border_chapter_form;
 }

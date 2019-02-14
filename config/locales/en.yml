@@ -57,6 +57,11 @@ en:
       sign_up: Sign up
       form_contains: This form contains
       error: error
+  static_pages:
+    home:
+      newest_story: Story newest
+      view_more: View more
+      chapters_newest: Chapters newest
   sessions:
     new:
       sign_in: Sign in
@@ -82,6 +87,7 @@ en:
       add_story: Add story
       save_story: Save story
     edit:
+      list_chapter: List chapters
       story_information: Story information
       edit_story: Edit story
       delete_story: Delete story

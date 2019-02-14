@@ -9,7 +9,7 @@
       <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
       <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br/>
       <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/>
-      <%= f.text_area :description, rows: Settings.text_area_rows_story_description, class: "form-control" %>sss
+      <%= f.text_area :description, rows: Settings.text_area_rows_story_description, class: "form-control" %>
       <%= f.submit yield(:button_text), class: "btn btn-primary mt-3 mb-5" %>
     <% end %>
 </div>

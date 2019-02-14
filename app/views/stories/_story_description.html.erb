@@ -10,10 +10,3 @@
 <%= image_tag @story.cover_image.url if @story.cover_image? %>
 <p><%= t ".description" %></p>
 <p><%= @story.description %></p>
-
-<h3><%= t ".list_chapter" %></h3>
-<ul id="chapters_item">
-  <%= render @chapters %>
-</ul>
-<%= link_to t(".add_chapter"), new_chapter_path(story_id: @story.id),
-  class: "btn btn-primary d-inline", role: "button", remote: true %>
