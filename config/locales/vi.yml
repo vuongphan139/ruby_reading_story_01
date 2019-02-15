@@ -1,4 +1,6 @@
 vi:
+  deleted_category: Bạn đã xóa thể loại.
+  delete_category_failed: Xóa thể loại thất bại.
   manager_category: Quản lý thể loại
   not_allowed_access_page: Bạn không có quyền truy cập trang này
   add_category_failed: Thêm thể loại thất bại.

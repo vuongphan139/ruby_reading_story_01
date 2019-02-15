@@ -19,6 +19,18 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def destroy
+    @category = Category.find_by id: params[:id]
+
+    if @category.destroy
+      flash[:success] = t "deleted_category"
+      redirect_to categories_path
+    else
+      flash.now[:danger] = t "delete_category_failed"
+      render :index
+    end
+  end
+
   private
 
   def admin_permission

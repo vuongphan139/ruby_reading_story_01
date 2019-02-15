@@ -1,7 +1,4 @@
 en:
-  not_allowed_access_page: You not allowed access this page.
-  add_category_failed: Add category failed.
-  add_category_successful: Add category successful.
   comment: comment
   commented: commented
   notice: The form contains
@@ -11,6 +8,11 @@ en:
   comment_created: comment created
   delete: Delete
   ago: ago
+  deleted_category: Deleted category.
+  delete_category_failed: Delete category failed.
+  not_allowed_access_page: You not allowed access this page.
+  add_category_failed: Add category failed.
+  add_category_successful: Add category successful.
   update_story: Update story
   edit_story: Edit story
   are_you_sure: Are you sure?

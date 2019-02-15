@@ -13,6 +13,13 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td colspan="2"></td>
+      <td>
+        <%= link_to t(".add_category"), "#",
+          class: "btn btn-primary", role: "button", remote: true %>
+      </td>
+    </tr>
     <%= render @categories %>
   </tbody>
 </table>

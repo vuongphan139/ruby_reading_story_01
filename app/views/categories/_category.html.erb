@@ -4,7 +4,7 @@
   <td>
     <%= link_to t(".edit"), "#",
       class: "btn btn-warning", role: "button", remote: true %>
-    <%= link_to t(".delete"), "#",
-      class: "btn btn-danger", role: "button", remote: true %>
+    <%= link_to t(".delete"), category_path(id: category.id),
+      class: "btn btn-danger", role: "button", data: {confirm: t("are_you_sure")}, method: :delete %>
   </td>
 </tr>
