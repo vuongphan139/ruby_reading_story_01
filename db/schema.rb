@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2019_01_29_034805) do
     t.string "account_name"
     t.string "email"
     t.string "avatar"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

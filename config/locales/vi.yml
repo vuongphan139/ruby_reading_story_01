@@ -1,4 +1,8 @@
 vi:
+  manager_category: Quản lý thể loại
+  not_allowed_access_page: Bạn không có quyền truy cập trang này
+  add_category_failed: Thêm thể loại thất bại.
+  add_category_successful: Thêm thể loại thành công
   update_story: Lưu chuyện
   edit_story: Sửa chuyện
   chapter_deleted_successful: Chương đã xóa thành công
@@ -30,6 +34,7 @@ vi:
   account_activations: Tài khoản kích hoạt
   layouts:
     header:
+      manager_category: Quản lý thể loại
       manager_story: Quản lý truyện
       home: Trang chủ
       category: Thể loại
@@ -48,6 +53,15 @@ vi:
       sign_up: Đăng ký
       form_contains: Form chứa
       error: Lỗi
+  categories:
+    index:
+      manager_category: Quản lý thể loại
+      add_category: Thêm thể loại
+      category_name: Tên thể loại
+      description: Mô tả
+      action: Thao tác
+      edit: Sửa
+      delete: Xóa
   static_pages:
     manager:
       add_story: Thêm truyện
