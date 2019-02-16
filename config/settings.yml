@@ -12,3 +12,4 @@ text_area_rows_story_description: 6
 chapters_newest_limit: 12
 stories_newest: 6
 stories_manager_page: 12
+categories_per_page: 5

@@ -1,4 +1,7 @@
 en:
+  not_allowed_access_page: You not allowed access this page.
+  add_category_failed: Add category failed.
+  add_category_successful: Add category successful.
   update_story: Update story
   edit_story: Edit story
   are_you_sure: Are you sure?
@@ -39,6 +42,7 @@ en:
   active: Actived
   layouts:
     header:
+      manager_category: Manager category
       manager_story: Manager story
       add_story: Add story
       home: Home
@@ -58,6 +62,15 @@ en:
       sign_up: Sign up
       form_contains: This form contains
       error: error
+  categories:
+    index:
+      manager_category: Manager category
+      add_category: Add category
+      category_name: Category name
+      description: Description
+      action: Action
+      edit: Edit
+      delete: Delete
   static_pages:
     manager:
       add_story: Add story
