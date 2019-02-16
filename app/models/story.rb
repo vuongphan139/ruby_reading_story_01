@@ -2,6 +2,7 @@ class Story < ApplicationRecord
   before_create :init_liked
   belongs_to :user
   has_many :chapters, dependent: :destroy
+  has_many :comments
   has_and_belongs_to_many :categories
   scope :newest, ->{order created_at: :desc}
   mount_uploader :cover_image, PictureUploader

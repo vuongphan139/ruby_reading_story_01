@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :stories
+  has_many :comments, dependent: :destroy
   before_save :downcase_email, :downcase_account_name
   before_create :create_activation_digest
   attr_reader :remember_token, :activation_token
@@ -52,6 +53,10 @@ class User < ApplicationRecord
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def current_user? user
+    self == user
   end
 
   private

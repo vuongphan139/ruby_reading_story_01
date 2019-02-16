@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   resources :stories
   resources :chapters
   resources :categories
+  resources :comments, only: %i(create destroy)
 end
