@@ -1,4 +1,9 @@
 en:
+  following: following
+  follower: follower
+  follow: follow
+  unfollow: unfollow
+  my_story: My story
   comment: comment
   commented: commented
   notice: The form contains
