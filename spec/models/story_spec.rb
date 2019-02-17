@@ -8,7 +8,6 @@ RSpec.describe Story, type: :model do
       it {should have_db_column(:cover_image).of_type(:string)}
       it {should have_db_column(:progress).of_type(:integer)}
       it {should have_db_column(:description).of_type(:string)}
-      it {should have_db_column(:liked).of_type(:integer)}
       it {should have_db_column(:user_id).of_type(:integer)}
     end
   end

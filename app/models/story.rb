@@ -1,14 +1,19 @@
 class Story < ApplicationRecord
-  before_create :init_liked
   belongs_to :user
   has_many :chapters, dependent: :destroy
   has_many :comments
+  has_many :interactives
   has_and_belongs_to_many :categories
   scope :newest, ->{order created_at: :desc}
   mount_uploader :cover_image, PictureUploader
 
-  def init_liked
-    self.liked = 0
+  def current_user_liked user
+    interactives.find_by user_id: user.id,
+                         interactive_type: :like
+  end
+
+  def count_like
+    interactives.like.size
   end
 
   def chapter_newest

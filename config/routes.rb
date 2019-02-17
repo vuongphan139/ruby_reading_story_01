@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :chapters
   resources :categories
   resources :comments, only: %i(create destroy)
+  resources :likes
 end

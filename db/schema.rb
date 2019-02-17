@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_153528) do
+ActiveRecord::Schema.define(version: 2019_02_16_020403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,13 +51,14 @@ ActiveRecord::Schema.define(version: 2019_02_14_153528) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "likes", force: :cascade do |t|
-    t.bigint "stories_id"
-    t.integer "likeable_id"
-    t.string "likeable_type"
+  create_table "interactives", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "story_id"
+    t.integer "interactive_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["stories_id"], name: "index_likes_on_stories_id"
+    t.index ["story_id"], name: "index_interactives_on_story_id"
+    t.index ["user_id"], name: "index_interactives_on_user_id"
   end
 
   create_table "stories", force: :cascade do |t|
@@ -90,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_153528) do
   add_foreign_key "chapters", "stories"
   add_foreign_key "comments", "stories"
   add_foreign_key "comments", "users"
-  add_foreign_key "likes", "stories", column: "stories_id"
+  add_foreign_key "interactives", "stories"
+  add_foreign_key "interactives", "users"
   add_foreign_key "stories", "users"
 end
