@@ -126,8 +126,7 @@ tr {
   }
   .gravatar {
     float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+    margin: 5px 10px;
   }
 }
 
@@ -147,4 +146,14 @@ span.picture {
 
 #css_comment {
   background: $while;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-light;
+  }
 }

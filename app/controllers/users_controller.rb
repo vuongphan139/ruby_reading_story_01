@@ -20,11 +20,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    return unless @user.comments
-    @comments = @user.comments.order_desc.page(params[:page])
-                     .per Settings.comment_items_page
-  end
+  def index; end
+
+  def show; end
 
   private
 
