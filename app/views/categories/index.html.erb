@@ -1,10 +1,10 @@
-<h4 class="text-center my-4"><%= t ".manager_category" %></h4>
+<h4 class="text-center title my-4"><%= t ".manager_category" %></h4>
 <%= bootstrap_form_for @category, html: {class: "col-12"}, remote: true do |f| %>
   <%= f.text_field :name, class: "form-control" %>
   <%= f.text_area :description, class: "form-control" %>
   <%= f.submit t(".add_category"), class: "btn btn-primary mt-3 mb-5" %>
 <% end %>
-<table class="table">
+<table class="table" id="background_font">
   <thead>
     <tr>
       <th><%= t ".category_name" %></th>

@@ -9,7 +9,7 @@
     <p class="pl-3"><%= @story.description %></p>
   </div>
 </div>
-<div id="section-like-follow" class="row py-3 mt-5">
+<div id="section-like-follow" class="row py-3 mt-5 title">
   <% if logged_in? %>
     <% if @story.current_user_liked current_user %>
       <%= render "likes/dislike" %>

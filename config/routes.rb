@@ -13,4 +13,6 @@ Rails.application.routes.draw do
   resources :categories
   resources :comments, only: %i(create destroy)
   resources :likes
+  resources :relationships, only: %i(create destroy)
+  resources :following, :followers, only: %i(show)
 end

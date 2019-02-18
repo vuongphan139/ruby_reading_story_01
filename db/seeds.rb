@@ -15,4 +15,3 @@ user = User.first
     s = user.stories.build name: name, author_name: author_name
     s.save
 end
-

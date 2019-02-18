@@ -2,6 +2,14 @@ class User < ApplicationRecord
   has_many :stories
   has_many :comments, dependent: :destroy
   has_many :interactives
+  has_many :active_relationships, foreign_key: "follower_id",
+                                  class_name: Relationship.name,
+                                  dependent: :destroy
+  has_many :passive_relationships, class_name:  Relationship.name,
+                                  foreign_key: "followed_id",
+                                  dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :followers, through: :passive_relationships, source: :follower
   before_save :downcase_email, :downcase_account_name
   before_create :create_activation_digest
   attr_reader :remember_token, :activation_token
@@ -35,6 +43,18 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
   end
 
   def remember

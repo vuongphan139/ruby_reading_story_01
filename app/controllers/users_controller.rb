@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :load_user, only: %i(show edit update destroy)
   before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: %i(destroy)
@@ -20,9 +21,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def index; end
-
-  def show; end
+  def show
+    @btn_follow = current_user.active_relationships.build
+    @btn_unfollow = current_user.active_relationships
+                                .find_by followed_id: @user.id
+  end
 
   private
 
@@ -38,5 +41,12 @@ class UsersController < ApplicationController
 
   def admin_user
     redirect_to root_url unless current_user.admin?
+  end
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    return if @user
+    flash[:danger] = t "user_not_found"
+    redirect_to root_url
   end
 end
