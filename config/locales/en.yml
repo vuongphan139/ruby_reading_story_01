@@ -1,4 +1,11 @@
 en:
+  profile_update: Profile updated
+  profile_update_fail: Profile update fail
+  confirmation: confirmation
+  edit_user: edit user
+  save_changes: save changes
+  notice: Update your profile
+  change: change
   following: following
   follower: follower
   follow: follow

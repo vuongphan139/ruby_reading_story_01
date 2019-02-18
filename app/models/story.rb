@@ -27,4 +27,8 @@ class Story < ApplicationRecord
   def progress_info
     progress == Settings.progress_done ? I18n.t("done") : I18n.t("writing")
   end
+
+  def current_user? user
+    self == user
+  end
 end
