@@ -16,9 +16,6 @@ $done_status: #009900;
 
 body {
   font-family: SourceSansPro, sans-serif;
-  background: image-url("bb.jpg") no-repeat white;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .logo {
@@ -195,4 +192,8 @@ span.picture {
 
 .users.follow {
   padding: 0;
+}
+
+#chapter-content {
+  font-size: 23px;
 }
