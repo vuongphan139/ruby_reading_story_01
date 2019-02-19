@@ -97,10 +97,14 @@ vi:
     new:
       sign_in: Đăng nhập
   likes:
+    section_like:
+      like: Thích
     like:
       like: Thích
     dislike:
       dislike: Bỏ thích
   stories:
+    show:
+      posted: đã đăng
     edit:
       list_chapter: Các chương
