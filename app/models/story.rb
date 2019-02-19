@@ -4,6 +4,7 @@ class Story < ApplicationRecord
   has_many :comments
   has_many :interactives
   has_and_belongs_to_many :categories
+  scope :search, ->(name) {where "name LIKE ?", "%#{name}%"}
   scope :newest, ->{order created_at: :desc}
   mount_uploader :cover_image, PictureUploader
 
