@@ -23,6 +23,7 @@ class StoriesController < ApplicationController
       redirect_to edit_story_path @story
     else
       flash.now[:danger] = t "add_story_failure"
+      render :new
     end
   end
 
