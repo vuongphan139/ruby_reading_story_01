@@ -5,7 +5,7 @@ en:
   confirmation: confirmation
   edit_user: edit user
   save_changes: save changes
-  notice: Update your profile
+  update_profile: Update your profile
   change: change
   following: following
   follower: follower
@@ -119,6 +119,7 @@ en:
       like: Like
     dislike:
       dislike: Dislike
+      like: Like
   stories:
     show:
       story_info: Story Information

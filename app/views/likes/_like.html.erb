@@ -1,5 +1,5 @@
-<span><%= pluralize @story.count_like, "like" %></span>
+<span><%= pluralize @story.count_like, t(".like")%></span>
 <%= form_with url: likes_path, remote: true do |f| %>
   <%= hidden_field_tag :story_id, @story.id %>
-  <%= f.submit t(".like"), class: "btn btn-primary" %>
+  <%= f.submit t(".like"), class: "btn btn-primary ml-3" %>
 <% end %>

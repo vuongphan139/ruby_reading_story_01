@@ -5,7 +5,7 @@ vi:
   confirmation: Xác nhận
   edit_user: Chỉnh sửa người dùng
   save_changes: thay đổi lưu
-  notice: Cập nhật hồ sơ của bạn
+  update_profile: Cập nhật hồ sơ của bạn
   change: Thay đổi          
   deleted_category: Bạn đã xóa thể loại.
   delete_category_failed: Xóa thể loại thất bại.
