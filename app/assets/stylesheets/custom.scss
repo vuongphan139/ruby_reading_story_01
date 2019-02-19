@@ -23,17 +23,8 @@ body {
   width: 100px;
 }
 
-.title {
-  color: $while;
-}
-
 body > .container {
   min-height: 754px;
-}
-
-#background_font {
-  background: $while;
-  opacity: 0.8;
 }
 
 header {
@@ -196,4 +187,14 @@ span.picture {
 
 #chapter-content {
   font-size: 23px;
+}
+
+.comments_section li {
+  list-style: none;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
