@@ -21,6 +21,19 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t "profile_update"
+      redirect_to @user
+    else
+      flash[:danger] = t "profile_update_fail"
+      redirect_to root_url
+      render :edit
+    end
+  end
+
   def show
     @btn_follow = current_user.active_relationships.build
     @btn_unfollow = current_user.active_relationships
@@ -30,13 +43,12 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user)
-          .permit User::SIGNUP_PARAMS
+    params.require(:user).permit User::SIGNUP_PARAMS
   end
 
   def correct_user
     @user = User.find_by id: params[:id]
-    redirect_to root_url unless @user.current_user?(current_user)
+    redirect_to root_url unless @user.current_user? current_user
   end
 
   def admin_user
