@@ -1,4 +1,5 @@
 vi:
+  enter_content: Nhập nội dung
   profile_update: Hồ sơ được cập nhật
   profile_update_fail: Cập nhật hồ sơ thất bại
   confirmation: Xác nhận
@@ -12,7 +13,7 @@ vi:
   not_allowed_access_page: Bạn không có quyền truy cập trang này
   add_category_failed: Thêm thể loại thất bại.
   add_category_successful: Thêm thể loại thành công
-  comment: bình luận
+  comment: Bình luận
   commented: đã bình luận
   notice: Mẫu có chứa
   you_sure: Bạn chắc chứ ?
