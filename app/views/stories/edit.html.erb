@@ -1,16 +1,7 @@
 <div class="row mt-3 mb-5">
   <div class="col-md-4 p-3">
     <div id="form_story">
-      <h3><%= t ".story_information" %></h3>
-      <%= link_to t(".edit_story"), edit_story_path(@story), class: "btn btn-primary", role: "button", remote: true %>
-      <%= link_to t(".delete_story"), @story, method: :delete,
-        data: {confirm: t(".are_you_sure")}, class: "btn btn-danger", role: "button" %>
-      <p class="mt-3"><strong><%= t ".name_story" %>:</strong> <%= @story.name %></p>
-      <p><strong><%= t ".author" %>:</strong> <%= @story.author_name %></p>
-      <p><strong><%= t ".category" %>:</strong> <%= @story.category_info %></p>
-      <%= image_tag @story.cover_image.url if @story.cover_image? %>
-      <p class="mt-3"><strong><%= t ".description" %></strong></p>
-      <p><%= sanitize @story.description %></p>
+      <%= render "stories/story_description" %>
     </div>
     <div>
       <h3><%= t ".list_chapter" %></h3>
@@ -21,5 +12,7 @@
         class: "btn btn-primary", role: "button", remote: true %>
     </div>
   </div>
-  <div class="col-md-8 p-3" id="form_chapter"></div>
+  <div class="col-md-8 p-3" id="form_chapter">
+    <%= render "stories/edit_story_form" %>
+  </div>
 </div>
