@@ -81,6 +81,9 @@ en:
       settings: Settings
     footer:
       contact: Contact
+  search:
+    index:
+      search: Search
   users:
     new:
       sign_up: Sign up

@@ -3,7 +3,8 @@ $gray-light: #000000;
 $red: #FF0000;
 $while: #eaeaea;
 $blue: #0000FF;
-
+$th_background: #eee;
+$th_border_bottom: #ccc;
 $light_gray: #eaeaea;
 $dark_blue: #1d5268;
 $a_color: #000000;
@@ -197,4 +198,30 @@ span.picture {
   content: "";
   clear: both;
   display: table;
+}
+
+table.listext-table {
+  table-layout: fixed;
+}
+
+table.listext-table tr td {
+  padding: 5px 10px;
+  float: none;
+}
+
+table {
+  font-size: 16px;
+  font-size: 1rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+
+table.listext-table tr th {
+  background-color: $th_background;
+  padding: 4px 10px;
+  border-bottom: 2px solid $th_border_bottom;
+  float: none;
 }

@@ -1,20 +1,18 @@
 <h4 class="py-4"><%= t ".list_story" %></h3>
-<div class="row" id="background_font">
+<div class="row">
   <div class="col-md-3">
-    <h6><%= t ".category" %></h6>
-    <ul class="list_category">
-      <li><%= link_to t(".all_category"), stories_path %></li>
+    <h5><%= t ".category" %></h5>
+    <ul class="list_category pl-3 pt-2">
+      <li class="py-1"><%= link_to t(".all_category"), stories_path %></li>
       <% @categories.each do |category| %>
-        <li><%= link_to category.name, stories_path(category_id: category.id) %></li>
+        <li class="py-1"><%= link_to category.name, stories_path(category_id: category.id) %></li>
       <% end %>
     </ul>
-    <h6><%= t ".status" %></h6>
-    <ul>
-      
-    </ul>
+    <h5><%= t ".status" %></h5>
+    <ul></ul>
   </div>
-  <div class="col-md-9" id="background_font">
-    <table class="col-md-12 mb-5">
+  <div class="col-md-9">
+    <table class="listext-table col-md-12 mb-5">
       <tr>
         <th><%= t ".story_name" %></th>
         <th><%= t ".category" %></th>
@@ -26,7 +24,9 @@
             <%= link_to story.name, story %><br/>
           </td>
           <td><%= story.category_info %></td>
-          <td class="<%= story.progress == 1 ? "done" : "writing" %>"><%= story.progress_info %></td>
+          <td class="<%= story_progress story %>">
+            <%= story.progress_info %>
+          </td>
         </tr>
       <% end %>
     </table>

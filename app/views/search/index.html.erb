@@ -1,0 +1,30 @@
+<div class="row mt-4">
+  <%= bootstrap_form_with url: search_index_path, html: {class: "col-12"}, local: true, method: :get do |f| %>
+    <div class="row text-center">
+      <div class="col-10">
+        <%= f.text_field :name, hide_label: true, class: "form-control" %>
+      </div>
+      <div class="col-2"><%= f.submit t(".search"), class: "btn btn-primary w-100" %></div>
+    </div>
+  <% end %>
+</div>
+<div class="row">
+  <table class="listext-table col-md-12 mb-5">
+    <tr>
+      <th><%= t ".story_name" %></th>
+      <th><%= t ".category" %></th>
+      <th><%= t ".status" %></th>
+    </tr>
+    <% @stories.each do |story| %>
+      <tr>
+        <td>
+          <%= link_to story.name, story %><br/>
+        </td>
+        <td><%= story.category_info %></td>
+        <td class="<%= story_progress story %>">
+          <%= story.progress_info %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>

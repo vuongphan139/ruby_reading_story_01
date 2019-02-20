@@ -51,6 +51,9 @@ vi:
   active: đã kích hoạt
   not_activeted: Tài khoản chưa được kích hoạt và Kiểm tra email của bạn để biết liên kết kích hoạt.
   account_activations: Tài khoản kích hoạt
+  search:
+    index:
+      search: Tìm kiếm
   layouts:
     header:
       manager_category: Quản lý thể loại
