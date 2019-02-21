@@ -1,11 +1,13 @@
-<div class="row mt-3" id="background_font">
+<div class="story-description row mt-3">
   <div class="col-md-4 p-3">
     <%= image_tag @story.cover_image.url if @story.cover_image? %>
   </div>
   <div class="col-md-8 p-3">
-    <h5><%= time_ago_in_words @story.created_at %></h5>
-    <h4><%= @story.name %></h4>
-    <p><%= link_to @story.user.name, @story.user %>
+    <h4><strong><%= @story.name %></strong></h4>
+    <p class="mb-0">
+      <%= link_to @story.user.name, @story.user %>
+    </p>
+    <p><%= t ".posted" %> <%= time_ago_in_words @story.created_at %> <%= t "ago" %></p>
     <p class="pl-3"><%= sanitize @story.description %></p>
     <% if logged_in? && current_user.current_user?(@story.user) %>
       <%= link_to t(".edit"), edit_story_path, class: "btn btn-primary", role: "button"%>
@@ -19,20 +21,19 @@
     <% else %>
       <%= render "likes/like" %>
     <% end %>
-  <% else %>
-    <span><%= pluralize @story.count_like, t(".like") %></span>
   <% end %>
+  <span class="my-auto ml-4 likes"><%= pluralize @story.count_like, t(".like") %></span>
 </div>
 
-<div class="row mt-5" id="background_font">
-  <div class="col-md-4 p-3" >
-    <h4><%= t ".more_information" %></h4>
-    <p><%= t ".author" %>: <%= link_to @story.author_name, "#" %></p>
-    <p><%= t ".progress" %>: <%= @story.progress_info %></p>
-    <p><%= t ".categories" %>: <%= @story.category_info %></p>
+<div class="row mt-5">
+  <div class="col-md-5 p-3" >
+    <h4 class="mb-4"><%= t ".more_information" %></h4>
+    <p><span class="label"><%= t ".author" %>:</span> <%= link_to @story.author_name, "#" %></p>
+    <p><span class="label"><%= t ".progress" %>:</span> <%= @story.progress_info %></p>
+    <p><span class="label"><%= t ".categories" %>:</span> <%= @story.category_info %></p>
   </div>
-  <div class="col-md-8 p-3">
-    <h4><%= t ".chapters" %></h4>
+  <div class="col-md-7 p-3">
+    <h4 class="mb-4"><%= t ".chapters" %></h4>
     <ul>
       <% @story.chapters.each do |chapter| %>
         <li><%= link_to chapter.name, chapter %></li>

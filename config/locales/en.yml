@@ -118,6 +118,8 @@ en:
     edit_chapter_form:
       update_chapter: Update chapter
   likes:
+    section_like:
+      like: Like
     like:
       like: Like
     dislike:
@@ -125,6 +127,7 @@ en:
       like: Like
   stories:
     show:
+      posted: posted
       story_info: Story Information
       edit_story: Edit story
       more_information: More information

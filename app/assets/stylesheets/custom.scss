@@ -225,3 +225,18 @@ table.listext-table tr th {
   border-bottom: 2px solid $th_border_bottom;
   float: none;
 }
+
+.story-description img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#section-like-follow .likes {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.label {
+  font-weight: bold;
+}
