@@ -6,7 +6,15 @@ class Story < ApplicationRecord
   has_and_belongs_to_many :categories
   scope :search, ->(name) {where "name LIKE ?", "%#{name}%"}
   scope :newest, ->{order created_at: :desc}
+
+  validates :name, presence: true
+  validates :author_name, presence: true
+  validates :progress, presence: true
+  validates :description, presence: true
+  validates :user_id, presence: true
+
   mount_uploader :cover_image, PictureUploader
+  validates_presence_of :cover_image
 
   def current_user_liked user
     interactives.find_by user_id: user.id,
