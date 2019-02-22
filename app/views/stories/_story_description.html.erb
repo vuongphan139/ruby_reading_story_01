@@ -7,4 +7,11 @@
 <p><span class="label"><%= t ".category" %>:</span> <%= @story.category_info %></p>
 <%= image_tag @story.cover_image.url if @story.cover_image? %>
 <p class="mt-3"><span class="label"><%= t ".description" %></span></p>
-<p><%= sanitize @story.description %></p>
+<div class="description-content">
+  <%= sanitize @story.description %>
+</div>
+<div class="btn-more none">
+  <div class="button see_more">
+    >> <%= t ".view_more" %>
+  </div>
+</div>

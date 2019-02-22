@@ -105,6 +105,8 @@ vi:
       dislike: Bỏ thích
   stories:
     show:
+      view_less: Rút gọn
+      view_more: Xem thêm
       posted: đã đăng
     edit:
       list_chapter: Các chương
