@@ -252,3 +252,10 @@ table.listext-table tr th {
 #form_story .description-content {
   overflow: hidden;
 }
+
+.ellipsis {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
