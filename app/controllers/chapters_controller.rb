@@ -1,6 +1,6 @@
 class ChaptersController < ApplicationController
   before_action :find_chapter, only: %i(show edit update destroy)
-  before_action :find_story, only: %i(new create)
+  before_action :find_story, only: %i(new create show)
   layout "show_chapter_layout", only: %i(show)
 
   def new
@@ -26,7 +26,10 @@ class ChaptersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @chapters = @chapter.story.chapters.page(params[:page])
+                                       .per Settings.story_progress_done
+  end
 
   def edit
     @chapter = Chapter.find_by id: params[:id]

@@ -20,6 +20,8 @@ gem "kaminari", "~> 1.1", ">= 1.1.1"
 gem "mini_magick", "4.7.0"
 gem "pg", "~> 1.1", ">= 1.1.4"
 gem "puma", "~> 3.11"
+gem "font-awesome-rails"
+gem "jquery-rails",">= 4.3.1", "~> 4.3"
 gem "rails", "~> 5.2.1"
 gem "rubocop", "~> 0.54.0", require: false
 gem "sass-rails", "~> 5.0"

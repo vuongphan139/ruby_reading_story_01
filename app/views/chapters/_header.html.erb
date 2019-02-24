@@ -1,0 +1,21 @@
+<div class="container">
+  <nav class="navbar navbar-expand-sm justify-content-center navbar-custom fixed-top" id="nav-color">
+    <ul class="navbar-nav">
+      <%= link_to_prev_page @chapters, t(".chapterbackward"), class:"fas fa-backward mr-4 mt-2 text-light" %>
+      <li class="nav-item active ml-2">
+        <%= link_to t(".home"), root_path, class: "nav-link text-light" %>           
+      </li>
+      <li class="dropdown">
+        <%= link_to t("chapter"), "#", class: "dropdown-toggle nav-link text-light", data: {toggle: "dropdown"} %>
+        <ul class="dropdown-menu" id="style-dropdown">
+          <div id="section1">
+            <% @chapter.story.chapters.each_with_index do |chapter, index| %>
+              <li><%= link_to chapter.name, chapter_show_path(id: chapter.id, page: index + 1), class:"text-light" %></li>
+            <% end %>
+          </div>
+        </ul>
+      </li>
+      <%= link_to_next_page @chapters, t(".chapterforward"), class:"fas fa-forward ml-4 mt-2 text-light" %>
+    </ul>
+  </nav>
+</div>

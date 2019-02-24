@@ -104,9 +104,16 @@ vi:
     dislike:
       dislike: Bỏ thích
   stories:
+    story_description:
+      edit_story: Sửa
+      delete_story: Xóa
     show:
       view_less: Rút gọn
       view_more: Xem thêm
       posted: đã đăng
     edit:
       list_chapter: Các chương
+  chapters:
+    header:
+      chapterbackward: Chương trước
+      chapterforward: Chương sau
