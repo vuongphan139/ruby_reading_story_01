@@ -1,0 +1,59 @@
+<div class="story-description row mt-3">
+  <div class="col-md-4 p-3 text-center">
+    <%= image_tag @story.cover_image.url if @story.cover_image? %>
+  </div>
+  <div class="col-md-8 p-3">
+    <h4><strong><%= @story.name %></strong></h4>
+    <p class="mb-0">
+      <%= link_to @story.user.name, @story.user %>
+    </p>
+    <p><%= t ".posted" %> <%= time_ago_in_words @story.created_at %> <%= t "ago" %></p>
+    <div class="description-content">
+      <%= sanitize @story.description %>
+    </div>
+    <div class="btn-more none">
+      <div class="button see_more">
+        >> <%= t ".view_more" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="section-like-follow" class="row py-3 mt-5 title">
+  <% if logged_in? && !current_user.current_user?(@story.user) %>
+    <% if @story.current_user_liked current_user %>
+      <%= render "likes/dislike" %>
+    <% else %>
+      <%= render "likes/like" %>
+    <% end %>
+  <% end %>
+  <span class="my-auto ml-4 likes"><%= pluralize @story.count_like, t(".like") %></span>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-5 p-3" >
+    <h4 class="mb-4"><%= t ".more_information" %></h4>
+    <p><span class="label"><%= t ".author" %>:</span> <%= link_to @story.author_name, "#" %></p>
+    <p><span class="label"><%= t ".progress" %>:</span> <%= @story.progress_info %></p>
+    <p><span class="label"><%= t ".categories" %>:</span> <%= @story.category_info %></p>
+  </div>
+  <div class="col-md-7 p-3">
+    <h4 class="mb-4"><%= t ".chapters" %></h4>
+    <ul>
+      <% @story.chapters.each do |chapter| %>
+        <li><%= link_to chapter.name, chapter %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<% if logged_in? %>
+  <div class="row mt-5">
+    <div class="col-7">
+      <h3><%= t "comment"%></h3>
+      <%= render "shared/comment_form" %>
+      <div class="comments_section mt-4">
+        <%= render "comments/comment_section" %>
+      </div>
+    </div>
+  </div>
+<% end %>

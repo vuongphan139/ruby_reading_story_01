@@ -1,1 +1,168 @@
 en:
+  enter_content: Enter content
+  profile_update: Profile updated
+  profile_update_fail: Profile update fail
+  confirmation: confirmation
+  edit_user: edit user
+  save_changes: save changes
+  update_profile: Update your profile
+  change: change
+  following: following
+  follower: follower
+  follow: follow
+  unfollow: unfollow
+  my_story: My story
+  comment: Comment
+  commented: commented
+  notice: The form contains
+  you_sure: You sure ?
+  view_my_profile: View my profile
+  new_comment: new comment
+  comment_created: comment created
+  delete: Delete
+  ago: ago
+  deleted_category: Deleted category.
+  delete_category_failed: Delete category failed.
+  not_allowed_access_page: You not allowed access this page.
+  add_category_failed: Add category failed.
+  add_category_successful: Add category successful.
+  update_story: Update story
+  edit_story: Edit story
+  are_you_sure: Are you sure?
+  edit_chapter: Edit chapter
+  add_chapter: Add chapter
+  chapter_deleted_successful: Chapter deleted successful
+  chapter_delete_failed: Chapter delete failed
+  add_chapter_successful: add chapter successful
+  add_chapter_failure: add chapter failure
+  chapter_update_successful: chapter update successful
+  chapter_update_failure: chapter update failure
+  delete_chapter: Delete chapter
+  chapter_not_found: chapter not found
+  save_chapter: Save chapter
+  name_chaptername_chapter: name chaptername chapter
+  content: content
+  story_not_found: Story not found.
+  story_delete_failed: Story delete failed.
+  story_deleted_successful: Story deleted successful.
+  notice: Please check your email to activate your account.
+  account_activated: Account activated
+  invalid_activation_link: Invalid activation link
+  writing: Writing
+  done: Done
+  story_update_failure: Story update failure.
+  story_update_successful: Story update successful.
+  add_story_failure: Add story failure.
+  add_story_successful: Add story successful.
+  invalid_email_password: Invalid email or password.
+  login_successful: Login successful.
+  please_login_account: Please login account!
+  sign_up_success: Sign up successful.
+  sign_up_fail: Sign up fail.
+  wel_web: Welcome to the Sample App! Click on the link below to activate your account
+  not_activeted: Account not activated and Check your email for the activation link.
+  account_activations: Account activation
+  hi: Hi
+  active: Actived
+  layouts:
+    header:
+      manager_category: Manager category
+      manager_story: Manager story
+      add_story: Add story
+      home: Home
+      category: Category
+      list: List
+      search: Search
+      help: Help
+      sign_up: Sign up
+      sign_in: Sign in
+      accout: Accout
+      profile: Profile
+      settings: Settings
+    footer:
+      contact: Contact
+  search:
+    index:
+      search: Search
+  users:
+    new:
+      sign_up: Sign up
+      form_contains: This form contains
+      error: error
+  categories:
+    index:
+      manager_category: Manager category
+      add_category: Add category
+      category_name: Category name
+      description: Description
+      action: Action
+      edit: Edit
+      delete: Delete
+  static_pages:
+    manager:
+      add_story: Add story
+      my_stories: My stories
+      category_manager: Category manager
+    home:
+      newest_story: Story newest
+      view_more: View more
+      chapters_newest: Chapters newest
+  sessions:
+    new:
+      sign_in: Sign in
+  chapters:
+    show:
+      story: Story
+    new_chapter_form:
+      save_chapter: Save chapter
+    edit_chapter_form:
+      update_chapter: Update chapter
+  likes:
+    section_like:
+      like: Like
+    like:
+      like: Like
+    dislike:
+      dislike: Dislike
+      like: Like
+  stories:
+    show:
+      view_less: View less
+      view_more: View more
+      posted: posted
+      story_info: Story Information
+      edit_story: Edit story
+      more_information: More information
+      author: Author
+      progress: Progress
+      categories: Categories
+      liked: Liked
+      chapters: Chapters
+      like: Like
+    new:
+      add_story: Add story
+      save_story: Save story
+    edit:
+      list_chapter: List chapters
+      story_information: Story information
+      edit_story: Edit story
+      delete_story: Delete story
+      add_chapter: Add chapter
+      chapters: Chapters
+      description: Description
+      category: Category
+      author: Author
+      name_story: Story's name
+      are_you_sure: Are you sure?
+    index:
+      all_category: All category
+      list_story: List story
+      category: Category
+      status: Status
+      story_name: Story name
+      category: Category
+      status: Status
+  errors:
+    messages:
+      carrierwave_processing_error: failed to be processed
+      carrierwave_integrity_error: is not an allowed file type

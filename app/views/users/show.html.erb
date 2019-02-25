@@ -1,0 +1,29 @@
+<% provide :title, @user.name %>
+<div class="row" id="background_font">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name  %>
+      </h1>
+    </section>
+    <section class="stats">
+      <%= render "shared/stats" %>
+    </section>
+  </aside>        
+  <div class="col-md-8">
+    <%= render "follow_form" if logged_in? %>
+    <h4 class="text-center my-4 "><%= t "my_story" %></h4>
+    <div class="row">
+      <% @user.stories.limit(Settings.stories_newest).each do |story| %>
+        <div class="col-sm-3 ellipsis">
+          <%= link_to story.chapter_newest, style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
+          <%= link_to story.name, story %><br/>
+          <%= link_to_if story.chapter_newest.present?, story.chapter_newest&.name, story.chapter_newest %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <button type="button" class="btn btn-secondary text-center col-3 mt-4"><%= t ".view_more" %></button>
+  </div>
+</div>

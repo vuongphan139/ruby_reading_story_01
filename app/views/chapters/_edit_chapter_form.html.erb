@@ -1,0 +1,9 @@
+<% provide :button_text, t(".update_chapter") %>
+<div class="row pb-5">
+  <h3 class="m-auto"><%= t "edit_chapter" %></h3>
+</div>
+<div class="row">
+  <%= render "form" %>
+  <%= link_to t("delete_chapter"), @chapter, method: :delete, remote: true,
+    data: {confirm: t("are_you_sure")}, class: "btn btn-danger ml-3 mb-5", role: "button" %>
+</div>

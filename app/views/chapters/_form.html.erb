@@ -1,0 +1,12 @@
+<%= bootstrap_form_for @chapter, html: {class: "col-12"}, remote: true do |f| %>
+  <div>
+    <%= hidden_field_tag :story_id, @chapter.story_id %>
+  </div>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
+  <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %><br/>
+  <%= f.label :content %>
+  <%= f.cktext_area :content, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary mt-3 mb-5" %>
+<% end %>

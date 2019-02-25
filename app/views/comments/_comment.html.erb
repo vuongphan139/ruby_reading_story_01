@@ -1,0 +1,16 @@
+<li id="comment-<%= comment.id %>" class="clearfix">
+  <%= link_to gravatar_for(comment.user, size: Settings.size_gravatar), comment.user, class: "mr-3 float-left" %>
+  <div>
+    <p>
+      <%= link_to comment.user.name, comment.user %>
+      (<%= t "commented" %> <%= time_ago_in_words comment.created_at %> <%= t "ago" %>)
+    </p> 
+    <p><%= comment.content %></p>
+    <p>
+      <% if comment.user.current_user? current_user %>
+        <%= link_to t("delete"), comment, method: :delete, class: "ml-3 mb-5",
+          data: {confirm: t("you_sure")} %>
+      <% end %>
+    </p>
+  </div>
+</li>

@@ -1,0 +1,53 @@
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <%= link_to "NVStory", root_path, class: "navbar-brand" %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to t(".home"), root_path, class: "nav-link" %>           
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".category"), "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".list"), stories_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".search"), search_index_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to t(".help"), "#", class: "nav-link" %>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if logged_in? %>
+            <li class="dropdown">
+              <%= link_to t(".account"), "#", class: "dropdown-toggle nav-link", data: {toggle: "dropdown"} %>
+              <ul class="dropdown-menu mt-2">
+                <%= link_to t(".profile"), current_user, class: "dropdown-item" %>
+                <%= link_to t(".settings"), edit_user_path(current_user), class: "dropdown-item" %>
+                <%= link_to t(".add_story"), new_story_path, class: "dropdown-item" %>
+                <% if current_user.admin? %>
+                  <%= link_to t(".manager_category"), categories_path, class: "dropdown-item" %>
+                <% end %>
+                <div class="dropdown-divider"></div>
+                <%= link_to t(".log_out"), logout_path, method: :delete, class: "dropdown-item" %>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nav-item navbar-right">
+              <%= link_to t(".sign_up"), signup_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item navbar-right">
+              <%= link_to t(".sign_in"), signin_path, class: "nav-link" %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+</header>

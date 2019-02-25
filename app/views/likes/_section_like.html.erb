@@ -1,0 +1,6 @@
+<% if @story.current_user_liked current_user %>
+  <%= render "dislike" %>
+<% else %>
+  <%= render "like" %>
+<% end %>
+<span class="my-auto ml-4 likes"><%= pluralize @story.count_like, t(".like") %></span>

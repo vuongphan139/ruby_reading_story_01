@@ -1,0 +1,112 @@
+vi:
+  enter_content: Nhập nội dung
+  profile_update: Hồ sơ được cập nhật
+  profile_update_fail: Cập nhật hồ sơ thất bại
+  confirmation: Xác nhận
+  edit_user: Chỉnh sửa người dùng
+  save_changes: thay đổi lưu
+  update_profile: Cập nhật hồ sơ của bạn
+  change: Thay đổi          
+  deleted_category: Bạn đã xóa thể loại.
+  delete_category_failed: Xóa thể loại thất bại.
+  manager_category: Quản lý thể loại
+  not_allowed_access_page: Bạn không có quyền truy cập trang này
+  add_category_failed: Thêm thể loại thất bại.
+  add_category_successful: Thêm thể loại thành công
+  comment: Bình luận
+  commented: đã bình luận
+  notice: Mẫu có chứa
+  you_sure: Bạn chắc chứ ?
+  view_my_profile:  Xem hồ sơ của tôi
+  new_comment: bình luận mới
+  comment_created: bình luận được tạo
+  delete: Xóa
+  ago: Trước
+  update_story: Lưu chuyện
+  edit_story: Sửa chuyện
+  chapter_deleted_successful: Chương đã xóa thành công
+  chapter_delete_failed: Xóa chương không thành công
+  are_you_sure: Bạn có chắc không?
+  add_chapter_successful: thêm chương thành công
+  add_chapter_failure: thêm chương thất bại
+  chapter_update_successful: cập nhật chương thành công
+  chapter_update_failure: Lỗi cập nhật chương
+  delete_chapter: xóa chương
+  chapter_not_found: không tìm thấy chương
+  save_chapter: lưu chương
+  name_chapter: nội dung
+  content: content
+  active: Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn.
+  account_activated: Tài khoản được kích hoạt
+  invalid_activation_link: Liên kết kích hoạt không hợp lệ
+  writing: Dang viet
+  done: Hoan thanh
+  invalid_email_password: Email hoặc mật khẩu không hợp lệ.
+  login_successful: Đăng nhập thành công.
+  please_login_account: Vui lòng đăng nhập tài khoản!
+  sign_up_success: Đăng ký thành công.
+  sign_up_fail: Đăng ký thất bại.
+  wel_web: Chào mừng bạn đến với Sample app! Nhấp vào liên kết dưới đây để kích hoạt tài khoản của bạn
+  hi: xin chào
+  active: đã kích hoạt
+  not_activeted: Tài khoản chưa được kích hoạt và Kiểm tra email của bạn để biết liên kết kích hoạt.
+  account_activations: Tài khoản kích hoạt
+  search:
+    index:
+      search: Tìm kiếm
+  layouts:
+    header:
+      manager_category: Quản lý thể loại
+      manager_story: Quản lý truyện
+      home: Trang chủ
+      category: Thể loại
+      list: Danh sách
+      search: Tìm kiếm
+      help: Trợ giúp
+      sign_up: Đăng ký
+      sign_in: Đăng nhập
+      accout: Accout
+      profile: Profile
+      setting: Settings
+    footer:
+      contact: Liên hệ
+      users:
+    new:
+      sign_up: Đăng ký
+      form_contains: Form chứa
+      error: Lỗi
+  categories:
+    index:
+      manager_category: Quản lý thể loại
+      add_category: Thêm thể loại
+      category_name: Tên thể loại
+      description: Mô tả
+      action: Thao tác
+      edit: Sửa
+      delete: Xóa
+  static_pages:
+    manager:
+      add_story: Thêm truyện
+      my_stories: Truyện của tôi
+      category_manager: Quản lý thể loại
+    home:
+      newest_story: Sáng tác mới nhất
+      view_more: Xem thêm
+      chapters_newest: Chương mới nhất
+  sessions:
+    new:
+      sign_in: Đăng nhập
+  likes:
+    section_like:
+      like: Thích
+    like:
+      like: Thích
+    dislike:
+      dislike: Bỏ thích
+  stories:
+    show:
+      view_less: Rút gọn
+      view_more: Xem thêm
+      posted: đã đăng
+    edit:
+      list_chapter: Các chương
