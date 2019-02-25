@@ -1,5 +1,5 @@
 <div class="story-description row mt-3">
-  <div class="col-md-4 p-3">
+  <div class="col-md-4 p-3 text-center">
     <%= image_tag @story.cover_image.url if @story.cover_image? %>
   </div>
   <div class="col-md-8 p-3">
@@ -8,10 +8,14 @@
       <%= link_to @story.user.name, @story.user %>
     </p>
     <p><%= t ".posted" %> <%= time_ago_in_words @story.created_at %> <%= t "ago" %></p>
-    <p class="pl-3"><%= sanitize @story.description %></p>
-    <% if logged_in? && current_user.current_user?(@story.user) %>
-      <%= link_to t(".edit"), edit_story_path, class: "btn btn-primary", role: "button"%>
-    <% end %>
+    <div class="description-content">
+      <%= sanitize @story.description %>
+    </div>
+    <div class="btn-more none">
+      <div class="button see_more">
+        >> <%= t ".view_more" %>
+      </div>
+    </div>
   </div>
 </div>
 <div id="section-like-follow" class="row py-3 mt-5 title">

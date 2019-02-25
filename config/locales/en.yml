@@ -127,6 +127,8 @@ en:
       like: Like
   stories:
     show:
+      view_less: View less
+      view_more: View more
       posted: posted
       story_info: Story Information
       edit_story: Edit story
