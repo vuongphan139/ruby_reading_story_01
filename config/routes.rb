@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: %i(edit)
   resources :stories
   resources :chapters
+  get "chapters/:id/:page", to: "chapters#show", as: "chapter_show"
   resources :categories
   resources :comments, only: %i(create destroy)
   resources :likes

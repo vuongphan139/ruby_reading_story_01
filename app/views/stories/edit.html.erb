@@ -4,12 +4,12 @@
       <%= render "stories/story_description" %>  
     </div>
     <div>
-      <h3 class="mt-4"><%= t ".list_chapter" %></h3>
-      <ul id="chapters_item">
-        <%= render @chapters %>
-      </ul>
-      <%= link_to t(".add_chapter"), new_chapter_path(story_id: @story.id),
-        class: "btn btn-primary", role: "button", remote: true %>
+      <h3><%= t ".list_chapter" %></h3>
+      <div class="col-sm-9">
+        <ul id="chapters_item" data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+          <%= render "chapters/load_chapters" %>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="col-md-8 p-3" id="form_chapter"></div>

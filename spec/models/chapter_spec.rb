@@ -5,7 +5,6 @@ RSpec.describe Chapter, type: :model do
     context "columns" do
       it {should have_db_column(:name).of_type(:string)}
       it {should have_db_column(:content).of_type(:string)}
-      it {should have_db_column(:image).of_type(:string)}
       it {should have_db_column(:progress).of_type(:integer)}
       it {should have_db_column(:story_id).of_type(:integer)}
     end

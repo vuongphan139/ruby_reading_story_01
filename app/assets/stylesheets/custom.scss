@@ -14,9 +14,34 @@ $all_category_color: #007bff;
 $border_chapter_form: #1d526826;
 $writing_status: #000099;
 $done_status: #009900;
+$blue-nav: #1d5268;
 
 body {
   font-family: SourceSansPro, sans-serif;
+}
+
+#section1 {
+  height: 150px;
+  overflow-y: scroll;
+  background: $blue-nav;
+}
+
+#section1 > li > a {
+  color: $while;
+}
+
+#nav-color {
+  background: $blue-nav !important;
+}
+
+#chapters_item {
+  padding-left: 0;
+}
+
+#style-dropdown {
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 7px;
 }
 
 .logo {
@@ -217,6 +242,10 @@ table {
   width: 100%;
   margin: 0;
   text-align: left;
+}
+
+#content-chapter {
+  margin-top: 80px;
 }
 
 table.listext-table tr th {
