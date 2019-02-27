@@ -8,7 +8,8 @@
       <%= f.text_field :author_name, class: "form-control" %>
       <%= f.select :progress, progress_select_value_helper, class: "form-control" %><br/>
       <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br/>
-      <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png" %><br/>
+      <%= f.file_field :cover_image, accept: "image/jpeg,image/gif,image/png", id: "avatar-upload" %><br/>
+      <%= image_tag f.object.cover_image.url, class: "img-thumbnail mb-4", id: "img_prev", alt: "image preview" %><br/>
       <%= f.label :description %>
       <%= f.cktext_area :description, class: "form-control" %>
 
