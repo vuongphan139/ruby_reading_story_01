@@ -259,3 +259,9 @@ table.listext-table tr th {
   white-space: nowrap;
   overflow: hidden;
 }
+
+#img_prev {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
