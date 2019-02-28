@@ -28,7 +28,7 @@ class ChaptersController < ApplicationController
 
   def show
     @chapters = @chapter.story.chapters.page(params[:page])
-                                       .per Settings.story_progress_done
+                        .per Settings.story_progress_done
   end
 
   def edit

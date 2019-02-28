@@ -4,7 +4,7 @@ class CreateStories < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :author_name
       t.string :cover_image
-      t.integer :progress
+      t.integer :progress, default: false
       t.string :description
       t.references :user, foreign_key: true
 
