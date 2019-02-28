@@ -1,0 +1,10 @@
+<div class="row ml-3" id="form_repcomment">
+  <%= bootstrap_form_for @comment, remote: true do |f| %>
+    <%= render "shared/error_messages", object: f.object %>
+    <%= hidden_field_tag :parent_id, @parent_id %>
+    <%= hidden_field_tag :story_id, @story_id %>
+    <%= f.text_area :content, class: "form-control" %>
+
+    <%= f.submit t("reply"), class: "btn btn-primary mt-3 mb-5" %>
+  <% end %>    
+</div>

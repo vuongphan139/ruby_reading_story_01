@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :chapters
   get "chapters/:id/:page", to: "chapters#show", as: "chapter_show"
   resources :categories
-  resources :comments, only: %i(create destroy)
+  resources :comments
   resources :likes
   resources :relationships, only: %i(create destroy)
   resources :following, :followers, only: %i(show)

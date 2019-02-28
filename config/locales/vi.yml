@@ -1,6 +1,7 @@
 vi:
   enter_content: Nhập nội dung
   profile_update: Hồ sơ được cập nhật
+  comment_deleted: Bình luận đã được xóa
   profile_update_fail: Cập nhật hồ sơ thất bại
   confirmation: Xác nhận
   edit_user: Chỉnh sửa người dùng
