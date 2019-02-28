@@ -1,5 +1,5 @@
 module ChaptersHelper
-  def name_story chapter
+  def name_story
     if @chapters&.page
       @chapters.first.story.name
     else
@@ -7,7 +7,7 @@ module ChaptersHelper
     end
   end
 
-  def name_chapter chapter
+  def name_chapter
     if @chapters&.page
       @chapters.first.name
     else
@@ -15,7 +15,7 @@ module ChaptersHelper
     end
   end
 
-  def content_chapter chapter
+  def content_chapter
     if @chapters&.page
       sanitize @chapters.first.content
     else

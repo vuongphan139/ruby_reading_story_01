@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
     t.string "name"
     t.string "author_name"
     t.string "cover_image"
-    t.integer "progress"
+    t.integer "progress", default: 0
     t.string "description"
     t.bigint "user_id"
     t.datetime "created_at", null: false
