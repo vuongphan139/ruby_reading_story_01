@@ -15,6 +15,7 @@ $border_chapter_form: #1d526826;
 $writing_status: #000099;
 $done_status: #009900;
 $blue-nav: #1d5268;
+$result_search_bg: #FFFFFF;
 
 body {
   font-family: SourceSansPro, sans-serif;
@@ -297,4 +298,21 @@ table.listext-table tr th {
 
 .invalid-feedback {
   font-size: 95%;
+}
+
+.input-group-append {
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.result-search {
+  background: $result_search_bg;
+  position: absolute;
+  z-index: 1000;
+  width: 302px;
+  box-shadow: 0 2px 10px #ababab;
+  margin-top: 3px;
 }

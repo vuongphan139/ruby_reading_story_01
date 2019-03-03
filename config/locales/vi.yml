@@ -56,6 +56,7 @@ vi:
       search: Tìm kiếm
   layouts:
     header:
+      search_this_blog: Nhập từ khóa
       manager_category: Quản lý thể loại
       manager_story: Quản lý truyện
       home: Trang chủ

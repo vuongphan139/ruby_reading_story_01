@@ -66,6 +66,7 @@ en:
   active: Actived
   layouts:
     header:
+      search_this_blog: Search this blog
       manager_category: Manager category
       manager_story: Manager story
       add_story: Add story
@@ -126,7 +127,7 @@ en:
     like:
       like: Like
     dislike:
-      dislike: Dislike
+      dislike: Unlike
       like: Like
   stories:
     story_description:
