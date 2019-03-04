@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
+    t.integer "parent_id", default: 0
     t.bigint "user_id"
     t.bigint "story_id"
     t.datetime "created_at", null: false

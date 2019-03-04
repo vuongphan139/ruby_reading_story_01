@@ -1,4 +1,4 @@
-<li id="comment-<%= comment.id %>" class="clearfix">
+<li id="comment-<%= comment.id %>" class="clearfix mt-5">
   <%= link_to gravatar_for(comment.user, size: Settings.size_gravatar), comment.user, class: "mr-3 float-left" %>
   <div>
     <p>
@@ -8,9 +8,20 @@
     <p><%= comment.content %></p>
     <p>
       <% if comment.user.current_user? current_user %>
-        <%= link_to t("delete"), comment, method: :delete, class: "ml-3 mb-5",
+        <%= link_to t("delete"), comment, method: :delete, class: "btn btn-danger ml-3",
           data: {confirm: t("you_sure")} %>
       <% end %>
+      <%= link_to t("reply"), new_comment_path(parent_id: comment.id, story_id: comment.story.id), class:"btn btn-primary ml-3", remote: true %>
     </p>
   </div>
 </li>
+<div class="reply-comment ml-3 mt-3" id="replycomments">
+  <% Comment.child_comments(comment.id).each do |comment| %>
+    <p><b><%= comment.user.name %>:</b> &nbsp;&nbsp;&nbsp;<%= comment.content %></p>
+    <% if comment.user.current_user? current_user %>
+        <%= link_to t("delete"), comment, method: :delete, class: "ml-1 text-danger",
+          data: {confirm: t("you_sure")} %>
+    <% end %>
+  <% end %>
+</div>
+<div class="repcomment-<%= comment.id %>"></div>

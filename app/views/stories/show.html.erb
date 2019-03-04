@@ -16,6 +16,9 @@
         >> <%= t ".view_more" %>
       </div>
     </div>
+    <% if logged_in? && current_user.current_user?(@story.user) %>
+      <%= link_to t(".edit"), edit_story_path, class: "btn btn-primary", role: "button"%>
+    <% end %>
   </div>
 </div>
 <div id="section-like-follow" class="row py-3 mt-5 title">

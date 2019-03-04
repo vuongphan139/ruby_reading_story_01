@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
 
     return unless logged_in?
     @comment = current_user.comments.build
-    @comments = @story.comments.order_desc
+    @comments = @story.comments.child_comments(Settings.comment_parent_id).order_desc
                       .page(params[:page]).per Settings.comment_items_page
     @interactive = @story.interactives.build
   end

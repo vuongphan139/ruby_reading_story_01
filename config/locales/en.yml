@@ -1,5 +1,7 @@
 en:
+  reply: Reply
   enter_content: Enter content
+  comment_deleted: Comment deleted
   profile_update: Profile updated
   profile_update_fail: Profile update fail
   confirmation: confirmation

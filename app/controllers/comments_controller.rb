@@ -1,6 +1,12 @@
 class CommentsController < ApplicationController
   before_action :correct_user, only: %i(destroy)
 
+  def new
+    @story_id = params[:story_id]
+    @parent_id = params[:parent_id]
+    @comment = Comment.new
+  end
+
   def create
     create_comment
 
@@ -9,8 +15,8 @@ class CommentsController < ApplicationController
     else
       @feed_items = current_user.feed.page params[:page]
     end
-    @comments = @comment.story.comments.order_desc.page(params[:page])
-                        .per Settings.comment_items_page
+    @comments = @comment.story.comments.child_comments(Settings.comment_parent_id)
+                        .order_desc.page(params[:page]).per Settings.comment_items_page
     respond_to do |format|
       format.html{redirect_to story_path @story}
       format.js
@@ -33,7 +39,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit :content
+    params.require(:comment).permit :content, :parent_id
   end
 
   def correct_user
@@ -42,8 +48,8 @@ class CommentsController < ApplicationController
   end
 
   def create_comment
-    @story = Story.find_by id: params[:story_id]
-    @comment = @story.comments.build comment_params
+    @comment = Story.find_by(id: params[:story_id]).comments.build comment_params
     @comment.user_id = current_user.id
+    @comment.parent_id = @parent_id if @parent_id = params[:parent_id]
   end
 end
