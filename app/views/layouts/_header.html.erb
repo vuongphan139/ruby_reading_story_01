@@ -17,13 +17,14 @@
           <li class="nav-item">
             <%= link_to t(".list"), stories_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to t(".search"), search_index_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to t(".help"), "#", class: "nav-link" %>
-          </li>
         </ul>
+        <%= bootstrap_form_with url: search_index_path, html: {class: "m-auto search-box"}, method: :get do |f| %>
+          <div class="input-group">
+            <%= f.text_field :name, hide_label: true, placeholder: t(".search_this_blog"), class: "key-search", data: {url: ENV["URL_SEARCH"]} %>
+            <%= f.submit t(".search"), class: "btn btn-secondary" %>
+          </div>
+          <div class="result-search"></div>
+        <% end %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li class="dropdown">
