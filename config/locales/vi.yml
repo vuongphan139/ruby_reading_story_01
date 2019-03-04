@@ -67,9 +67,9 @@ vi:
       help: Trợ giúp
       sign_up: Đăng ký
       sign_in: Đăng nhập
-      accout: Accout
-      profile: Profile
-      setting: Settings
+      accout: Tài khoản
+      profile: Hồ sơ
+      setting: Cài đặt
     footer:
       contact: Liên hệ
       users:
@@ -92,6 +92,7 @@ vi:
       my_stories: Truyện của tôi
       category_manager: Quản lý thể loại
     home:
+      most_likes: Truyện nhiều lượt thích
       newest_story: Sáng tác mới nhất
       view_more: Xem thêm
       chapters_newest: Chương mới nhất

@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
     t.string "cover_image"
     t.integer "progress", default: 0
     t.string "description"
+    t.integer "liked", default: 0
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

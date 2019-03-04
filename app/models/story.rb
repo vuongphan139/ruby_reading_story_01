@@ -6,6 +6,7 @@ class Story < ApplicationRecord
   has_and_belongs_to_many :categories
   scope :search, ->(name){where "name LIKE ?", "%#{name}%"}
   scope :newest, ->{order created_at: :desc}
+  scope :most_likes, ->{order liked: :desc}
 
   validates :name, presence: true
   validates :author_name, presence: true
