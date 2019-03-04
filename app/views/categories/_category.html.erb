@@ -2,9 +2,9 @@
   <td><%= category.name %></td>
   <td><%= category.description %></td>
   <td>
-    <%= link_to t(".edit"), "#",
-      class: "btn btn-warning", role: "button", remote: true %>
-    <%= link_to t(".delete"), category_path(id: category.id),
-      class: "btn btn-danger", role: "button", data: {confirm: t("are_you_sure")}, method: :delete %>
+    <% unless category.stories.any? %>
+      <%= link_to t(".delete"), category_path(id: category.id),
+        class: "btn btn-danger", role: "button", data: {confirm: t("are_you_sure")}, method: :delete %>
+    <% end %>
   </td>
 </tr>
