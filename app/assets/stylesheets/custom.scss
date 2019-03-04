@@ -9,16 +9,22 @@ $light_gray: #eaeaea;
 $dark_blue: #1d5268;
 $a_color: #000000;
 $footer_text_color: #ffffff;
-$list_story_table_border: #000000;
 $all_category_color: #007bff;
 $border_chapter_form: #1d526826;
+$border_chapter_form: #3f434426;
 $writing_status: #000099;
 $done_status: #009900;
 $blue-nav: #1d5268;
 $result_search_bg: #FFFFFF;
+$gray-background: #3b3d3d26;
 
 body {
   font-family: SourceSansPro, sans-serif;
+  background-color: $gray-background;
+}
+
+#poster_text {
+  margin-bottom: 0 !important;
 }
 
 #section1 {
@@ -74,12 +80,7 @@ ul {
 }
 
 tr {
-  border-bottom: 1px solid $list_story_table_border;
-}
-
-#section-like-follow {
-  border-bottom: 3px dashed $light_gray;
-  border-top: 3px dashed $light_gray;
+  border-bottom: 1px solid $a_color;
 }
 
 .toast {
