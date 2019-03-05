@@ -1,9 +1,9 @@
 <h4 class="text-center my-4"><%= t ".newest_story" %></h4>
-<div class="row" id="background_font">
+<div class="row text-center" id="background_font">
   <% @stories.limit(Settings.stories_newest).each do |story| %>
     <div class="col-sm-2 ellipsis">
     <%= link_to story.chapter_newest, style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
-      <%= link_to story.name, story %><br/>
+      <%= link_to story.name, story, class:"font-weight-bold text-capitalize" %><br/>
       <%= link_to_if story.chapter_newest.present?, story.chapter_newest&.name, story.chapter_newest %>
     <% end %>
   </div>
@@ -12,11 +12,11 @@
 <button type="button" class="btn btn-secondary text-center col-3 mt-4"><%= t ".view_more" %></button>
 
 <h4 class="text-center my-4"><%= t ".most_likes" %></h4>
-<div class="row" id="background_font">
+<div class="row text-center" id="background_font">
   <% @stories_most_likes.each do |story| %>
     <div class="col-sm-2 ellipsis">
     <%= link_to story.chapter_newest, style: "background-image: url(#{story.cover_image.url})", class: "card mb-2" do %>
-      <%= link_to story.name, story %><br/>
+      <%= link_to story.name, story, class:"font-weight-bold text-capitalize" %><br/>
       <%= link_to_if story.chapter_newest.present?, story.chapter_newest&.name, story.chapter_newest %>
     <% end %>
   </div>
