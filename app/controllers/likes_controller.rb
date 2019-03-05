@@ -7,6 +7,7 @@ class LikesController < ApplicationController
                                             interactive_type: :like
 
     if @like.save
+      @story.update liked: @story.liked + 1
       respond_to do |format|
         format.html
         format.js
@@ -22,6 +23,7 @@ class LikesController < ApplicationController
                                        user_id: current_user.id,
                                        interactive_type: :like
     if @interactive.destroy
+      @story.update liked: @story.liked - 1
       respond_to do |format|
         format.html
         format.js

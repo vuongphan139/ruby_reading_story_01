@@ -19,3 +19,4 @@ comment_items_page: 5
 gravatar_size_user: 50
 story_progress_done: 1
 comment_parent_id: 0
+stories_most_likes_limit: 6
