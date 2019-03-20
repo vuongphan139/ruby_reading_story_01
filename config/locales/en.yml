@@ -1,5 +1,8 @@
 en:
+  reply: Reply
+  poster: Poster
   enter_content: Enter content
+  comment_deleted: Comment deleted
   profile_update: Profile updated
   profile_update_fail: Profile update fail
   confirmation: confirmation
@@ -66,6 +69,7 @@ en:
   active: Actived
   layouts:
     header:
+      search_this_blog: Search this blog
       manager_category: Manager category
       manager_story: Manager story
       add_story: Add story
@@ -97,13 +101,14 @@ en:
       description: Description
       action: Action
       edit: Edit
-      delete: Delete
+      delete: Delete story
   static_pages:
     manager:
       add_story: Add story
       my_stories: My stories
       category_manager: Category manager
     home:
+      most_likes: Most likes
       newest_story: Story newest
       view_more: View more
       chapters_newest: Chapters newest
@@ -117,15 +122,21 @@ en:
       save_chapter: Save chapter
     edit_chapter_form:
       update_chapter: Update chapter
+    header:
+      chapterbackward: Chapter backward
+      chapterforward: Chapter forward
   likes:
     section_like:
       like: Like
     like:
       like: Like
     dislike:
-      dislike: Dislike
+      dislike: Unlike
       like: Like
   stories:
+    story_description:
+      edit_story: Edit
+      delete_story: Delete
     show:
       view_less: View less
       view_more: View more
@@ -145,8 +156,8 @@ en:
     edit:
       list_chapter: List chapters
       story_information: Story information
-      edit_story: Edit story
-      delete_story: Delete story
+      edit_story: Edit
+      delete_story: Delete
       add_chapter: Add chapter
       chapters: Chapters
       description: Description

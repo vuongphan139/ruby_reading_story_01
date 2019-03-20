@@ -20,10 +20,10 @@
       </tr>
       <% @stories.each do |story| %>
         <tr>
-          <td>
+          <td class="ellipsis">
             <%= link_to story.name, story %><br/>
           </td>
-          <td><%= story.category_info %></td>
+          <td class="ellipsis"><%= story.category_info %></td>
           <td class="<%= story_progress story %>">
             <%= story.progress_info %>
           </td>

@@ -1,6 +1,9 @@
 vi:
+  reply: Trả lời
+  poster: Người đăng
   enter_content: Nhập nội dung
   profile_update: Hồ sơ được cập nhật
+  comment_deleted: Bình luận đã được xóa
   profile_update_fail: Cập nhật hồ sơ thất bại
   confirmation: Xác nhận
   edit_user: Chỉnh sửa người dùng
@@ -56,6 +59,7 @@ vi:
       search: Tìm kiếm
   layouts:
     header:
+      search_this_blog: Nhập từ khóa
       manager_category: Quản lý thể loại
       manager_story: Quản lý truyện
       home: Trang chủ
@@ -65,9 +69,9 @@ vi:
       help: Trợ giúp
       sign_up: Đăng ký
       sign_in: Đăng nhập
-      accout: Accout
-      profile: Profile
-      setting: Settings
+      accout: Tài khoản
+      profile: Hồ sơ
+      setting: Cài đặt
     footer:
       contact: Liên hệ
       users:
@@ -90,6 +94,7 @@ vi:
       my_stories: Truyện của tôi
       category_manager: Quản lý thể loại
     home:
+      most_likes: Truyện nhiều lượt thích
       newest_story: Sáng tác mới nhất
       view_more: Xem thêm
       chapters_newest: Chương mới nhất
@@ -104,9 +109,16 @@ vi:
     dislike:
       dislike: Bỏ thích
   stories:
+    story_description:
+      edit_story: Sửa
+      delete_story: Xóa
     show:
       view_less: Rút gọn
       view_more: Xem thêm
       posted: đã đăng
     edit:
       list_chapter: Các chương
+  chapters:
+    header:
+      chapterbackward: Chương trước
+      chapterforward: Chương sau

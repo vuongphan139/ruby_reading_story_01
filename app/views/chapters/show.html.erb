@@ -1,5 +1,8 @@
-<h2 class="text-center mt-3"><%= @chapter.story.name %></h2>
-<h4 class="text-center"><%= @chapter.name %></h4>
-<div class="mt-4" id="chapter-content">
-  <%= sanitize @chapter.content %>
+<%= render "chapters/header" %>
+<div id="content-chapter">
+  <h1 class="text-center label"><%= name_story %></h1>
+  <h4 class="text-center"><%= name_chapter %></h4>
+  <div class="mt-4" id="chapter-content">
+    <%= content_chapter %>
+  </div>
 </div>

@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
 
     return unless logged_in?
     @comment = current_user.comments.build
-    @comments = @story.comments.order_desc
+    @comments = @story.comments.child_comments(Settings.comment_parent_id).order_desc
                       .page(params[:page]).per Settings.comment_items_page
     @interactive = @story.interactives.build
   end
@@ -50,8 +50,8 @@ class StoriesController < ApplicationController
       flash.now[:success] = t "story_update_successful"
     else
       flash.now[:danger] = t "story_update_failure"
+      @story.reload
     end
-    @chapters = @story.chapters
     respond_to do |format|
       format.html{redirect_to edit_story_path @story}
       format.js

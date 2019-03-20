@@ -4,14 +4,16 @@ class Story < ApplicationRecord
   has_many :comments
   has_many :interactives
   has_and_belongs_to_many :categories
-  scope :search, ->(name) {where "name LIKE ?", "%#{name}%"}
+  scope :search, ->(name){where "name LIKE ?", "%#{name}%"}
   scope :newest, ->{order created_at: :desc}
+  scope :most_likes, ->{order liked: :desc}
 
   validates :name, presence: true
   validates :author_name, presence: true
   validates :progress, presence: true
   validates :description, presence: true
   validates :user_id, presence: true
+  validate :progress_validate
 
   mount_uploader :cover_image, PictureUploader
   validates_presence_of :cover_image
@@ -35,6 +37,13 @@ class Story < ApplicationRecord
 
   def progress_info
     progress == Settings.progress_done ? I18n.t("done") : I18n.t("writing")
+  end
+
+  def progress_validate
+    return unless progress == Settings.progress_done
+    return unless chapters.empty?
+    errors.add :progress,
+      "Can't set progress is 'done' when chapters empty."
   end
 
   def current_user? user

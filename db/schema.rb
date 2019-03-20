@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
   create_table "chapters", force: :cascade do |t|
     t.string "name"
     t.integer "progress"
-    t.string "image"
     t.string "content"
     t.bigint "story_id"
     t.datetime "created_at", null: false
@@ -42,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
+    t.integer "parent_id", default: 0
     t.bigint "user_id"
     t.bigint "story_id"
     t.datetime "created_at", null: false
@@ -75,8 +75,9 @@ ActiveRecord::Schema.define(version: 2019_02_17_103535) do
     t.string "name"
     t.string "author_name"
     t.string "cover_image"
-    t.integer "progress"
+    t.integer "progress", default: 0
     t.string "description"
+    t.integer "liked", default: 0
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
